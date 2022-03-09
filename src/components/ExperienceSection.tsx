@@ -1,41 +1,12 @@
 import { useState } from 'react';
 
-const companies = [
-  {
-    id: 1,
-    name: "PI.EXCHANGE",
-    url: "http://pi.exchange",
-    thumbnailUrl: "/images/companies/pi.webp",
-    title: "Front-end Developer",
-    from: "Sep 2021",
-    to: "Present",
-    responsibilities: [
-      "Write modern, performant, maintainable code for a diverse array of client and internal projects",
-      "Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify",
-      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis",
-    ],
-  },
-  {
-    id: 2,
-    name: "NNG Company Ltd.",
-    url: "http://nng.bz",
-    thumbnailUrl: "/images/companies/nng.png",
-    title: "Front-end Developer",
-    from: "Mar 2020",
-    to: "Sep 2021",
-    responsibilities: [
-      "lorem20z modern, performant, maintainable code for a lorem20z lorem20z",
-      "Workadlklke sadplatforms, frameworks, and content management systems such as JavaScript, TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify",
-      "a with multi-disci1023kls k3jllsda, designers, producers, and clients on a daily basis",
-    ],
-  },
-];
+import { companies } from '../constants/data';
 
 export default function ExperienceSection() {
   const [company, setCompany] = useState(companies[0]);
 
   return (
-    <section id="experience">
+    <section id="experience" className="max-w-5xl">
       <header className="flex items-center gap-3 mb-10 max-w-2xl">
         <div className="w-20 h-0.5 bg-gray-600"></div>
         <h2>

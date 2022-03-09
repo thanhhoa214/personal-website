@@ -14,7 +14,19 @@ function App() {
         <AboutMeSection></AboutMeSection>
         <ExperienceSection></ExperienceSection>
         <ProjectSection></ProjectSection>
-        <ContactSection></ContactSection>
+        <div className="h-screen flex flex-col">
+          <ContactSection className="py-12 flex-grow"></ContactSection>
+          <footer className="py-4 text-center font-ubuntu text-sm">
+            Designed &#38; inspired by{" "}
+            <a
+              href="https://github.com/bchiang7/v4"
+              className="inline-block animated-border-bottom"
+            >
+              brittanychiang.com
+            </a>
+            . Rebuilt by me
+          </footer>
+        </div>
       </main>
     </>
   );

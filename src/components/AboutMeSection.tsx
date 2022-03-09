@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutMeSection() {
   return (
-    <section id="about" className="ml-auto flex relative">
+    <section id="about" className="ml-auto flex relative max-w-5xl">
       <article>
         <header className="flex items-center gap-3 mb-10">
           <h2>
