@@ -10,7 +10,7 @@ export default function ProjectSection() {
           <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
             02.
           </strong>
-          <strong className="text-4xl text-gray-100">Where I've Worked</strong>
+          <strong className="text-4xl text-gray-100">Things I've Built</strong>
         </h2>
         <div className="flex-grow h-0.5 bg-gray-600"></div>
       </header>

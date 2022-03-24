@@ -1,8 +1,6 @@
-import React from 'react';
-
 export default function AboutMeSection() {
   return (
-    <section id="about" className="ml-auto flex relative max-w-5xl">
+    <section id="about" className="ml-auto flex relative max-w-5xl py-24">
       <article>
         <header className="flex items-center gap-3 mb-10">
           <h2>
@@ -46,7 +44,7 @@ export default function AboutMeSection() {
           className="w-60 h-60 rounded z-10 transition-transform"
         />
       </figure>
-      <div className="absolute top-28 -left-20 -z-10 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-40 bg-neon-500 bg-opacity-10 rounded-lg"></div>
+      <div className="absolute top-40 -left-20 -z-10 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-40 bg-neon-500 bg-opacity-10 rounded-lg"></div>
     </section>
   );
 }

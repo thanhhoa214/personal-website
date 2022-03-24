@@ -9,7 +9,7 @@ export default function Button({
 }) {
   return (
     <button
-      className={`border border-solid border-neon-400 rounded text-neon-500 hover:bg-opacity-30 hover:bg-neon-200 hover:shadow-md transition-colors font-ubuntu 
+      className={`border border-solid border-neon-400 rounded text-neon-500 hover:bg-opacity-30 hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu 
         ${
           size === "md"
             ? "py-1.5 px-3"

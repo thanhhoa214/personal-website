@@ -6,7 +6,7 @@ export default function ExperienceSection() {
   const [company, setCompany] = useState(companies[0]);
 
   return (
-    <section id="experience" className="max-w-5xl">
+    <section id="experience" className="max-w-5xl py-24">
       <header className="flex items-center gap-3 mb-10 max-w-2xl">
         <div className="w-20 h-0.5 bg-gray-600"></div>
         <h2>
@@ -18,11 +18,11 @@ export default function ExperienceSection() {
         <div className="flex-grow h-0.5 bg-gray-600"></div>
       </header>
       <main>
-        <ol className="inline-block w-60 relative align-top font-ubuntu">
+        <ol className="inline-block relative align-top font-ubuntu">
           <div
-            className="h-12 w-1 bg-neon-600 rounded-full absolute transition-transform"
+            className="h-16 w-1 bg-neon-600 rounded-full absolute transition-transform"
             style={{
-              transform: `translateY(${(company.id - 1) * 3}rem)`,
+              transform: `translateY(${(company.id - 1) * 4}rem)`,
             }}
           ></div>
           {companies.map((c) => (
@@ -31,14 +31,16 @@ export default function ExperienceSection() {
               className={c.id === company.id ? "active" : ""}
               onClick={() => setCompany(c)}
             >
-              <span className="inline-block h-7 w-7 p-1 -mt-0.5 rounded-md bg-white mr-2">
+              <span className="inline-block h-10 w-10 p-1 -mt-0.5 rounded-md bg-white mr-2">
                 <img
                   src={c.thumbnailUrl}
                   alt={`${c.name} logo`}
-                  className="h-5"
+                  className="h-8 max-w-full object-contain"
                 />
               </span>
-              <span className="inline-block align-top">{c.name}</span>
+              <span className="inline-block align-top text-xl pt-0.5 pl-1">
+                {c.name}
+              </span>
             </li>
           ))}
         </ol>

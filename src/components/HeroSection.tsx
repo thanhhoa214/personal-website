@@ -1,4 +1,4 @@
-import React from 'react';
+import { FiChevronsDown } from 'react-icons/fi';
 
 import Button from './Button';
 
@@ -21,6 +21,15 @@ export default function HeroSection() {
       <div className="absolute top-20 right-28 rotate-45 w-40 h-40 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-ping"></div>
       <div className="absolute top-80 right-24 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse"></div>
       <div className="absolute top-96 right-80 rotate-12 w-80 h-80 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg"></div>
+      <a
+        href="#about"
+        className="absolute bottom-20 left-20 animate-bounce hover:text-neon-600 cursor-pointer"
+      >
+        <span className="inline-block -rotate-90 mb-3 -ml-1.5 font-bold pointer-events-none">
+          explore
+        </span>
+        <FiChevronsDown size={50}></FiChevronsDown>
+      </a>
     </section>
   );
 }

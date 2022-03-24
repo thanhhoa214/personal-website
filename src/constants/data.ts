@@ -32,6 +32,21 @@ export const companies: Company[] = [
       "a with multi-disci1023kls k3jllsda, designers, producers, and clients on a daily basis",
     ],
   },
+  {
+    id: 3,
+    name: "KANTAR",
+    url: "https://www.kantar.com/",
+    thumbnailUrl: "/images/companies/kantar.png",
+    title: "Scripting Freelancer",
+    from: "Sep 2021",
+    to: "Present",
+    responsibilities: [
+      "Cooperate and analyze customer requirements",
+      "Write, control and maintain scripting projects",
+      "Assist others team to extract data from surveys",
+      "Utilize Front-end skill to enhance interviewee experience by creating new UI for special question",
+    ],
+  },
 ];
 export const projects: Project[] = [
   {
