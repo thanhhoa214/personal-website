@@ -5,6 +5,9 @@ module.exports = {
       fontFamily: {
         ubuntu: '"Ubuntu Mono"',
       },
+      height: {
+        main: 'calc(100vh - 70px)'
+      },
       colors: {
         navy: {
           50: "#3c4b61",

@@ -1,7 +1,11 @@
-import {
-  Company,
-  Project,
-} from '../types/entities';
+import { Company, Project } from "../types/entities";
+
+export const enum SectionId {
+  About = "about",
+  Experience = "experience",
+  Projects = "projects",
+  Contact = "contact",
+}
 
 export const companies: Company[] = [
   {

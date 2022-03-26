@@ -1,17 +1,17 @@
-import { projects } from '../constants/data';
-import { Project } from '../types/entities';
+import { projects, SectionId } from "../constants/data";
+import { Project } from "../types/entities";
 
 export default function ProjectSection() {
   return (
-    <section id="projects" className="mx-auto max-w-5xl">
+    <section id={SectionId.Projects} className="mx-auto max-w-5xl">
       <header className="flex items-center gap-3 mb-10 max-w-2xl">
         <div className="w-20 h-0.5 bg-gray-600"></div>
-        <h2>
+        <a href={"#" + SectionId.Projects} className="animated-border-bottom">
           <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
-            02.
+            03.
           </strong>
           <strong className="text-4xl text-gray-100">Things I've Built</strong>
-        </h2>
+        </a>
         <div className="flex-grow h-0.5 bg-gray-600"></div>
       </header>
       <main>

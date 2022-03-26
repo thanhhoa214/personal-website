@@ -1,13 +1,16 @@
-import { FiChevronsDown } from 'react-icons/fi';
+import { SectionId } from "../constants/data";
+import BounceSeeMore from "./atoms/BounceSeeMore";
 
-import Button from './Button';
+import Button from "./atoms/Button";
 
 export default function HeroSection() {
   return (
-    <section className="p-16 h-screen relative">
-      <p className="font-ubuntu text-lg text-neon-500 mb-4">Hi, my name is</p>
-      <h1 className="text-6xl font-bold mb-4 leading-tight">
-        <strong className="text-gray-100">Hoà Nguyễn.</strong>
+    <section className="py-16 px-4 md:px-16 h-main relative">
+      <p className="font-ubuntu text-sm md:text-lg text-neon-500 mb-0 md:mb-4">
+        Hi, my name is
+      </p>
+      <h1 className="text-2xl md:text-6xl font-bold mb-4 leading-tight">
+        <strong className="inline-block text-gray-100 mb-2">Hoà Nguyễn.</strong>
         <br />I build awesome things for the web.
       </h1>
       <p className="max-w-lg mb-12">
@@ -17,19 +20,11 @@ export default function HeroSection() {
       </p>
 
       <Button size="lg">Check out my résume</Button>
-      <div className="absolute top-20 right-96 -rotate-6 w-20 h-20 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-bounce"></div>
-      <div className="absolute top-20 right-28 rotate-45 w-40 h-40 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-ping"></div>
-      <div className="absolute top-80 right-24 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse"></div>
-      <div className="absolute top-96 right-80 rotate-12 w-80 h-80 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg"></div>
-      <a
-        href="#about"
-        className="absolute bottom-20 left-20 animate-bounce hover:text-neon-600 cursor-pointer"
-      >
-        <span className="inline-block -rotate-90 mb-3 -ml-1.5 font-bold pointer-events-none">
-          explore
-        </span>
-        <FiChevronsDown size={50}></FiChevronsDown>
-      </a>
+      <div className="hidden md:block absolute top-20 right-96 -rotate-6 w-20 h-20 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-bounce"></div>
+      <div className="hidden md:block absolute top-20 right-28 rotate-45 w-40 h-40 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-ping"></div>
+      <div className="hidden md:block absolute top-80 right-24 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse"></div>
+      <div className="hidden absolute top-96 right-80 rotate-12 w-80 h-80 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg"></div>
+      <BounceSeeMore isLeft={true} text="about me" targetId={SectionId.About} />
     </section>
   );
 }

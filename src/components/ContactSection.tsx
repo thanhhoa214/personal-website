@@ -1,16 +1,18 @@
-import React from 'react';
-
-import Button from './Button';
+import { SectionId } from "../constants/data";
+import Button from "./atoms/Button";
 
 export default function ContactSection({ className }: { className: string }) {
   return (
     <section
-      id="contact"
+      id={SectionId.Contact}
       className={`flex flex-col justify-center items-center text-center gap-y-4 py-12 ${className}`}
     >
-      <p className="font-ubuntu text-2xl text-neon-500 mr-2">
+      <a
+        href={"#" + SectionId.Contact}
+        className="font-ubuntu text-2xl text-neon-500 animated-border-bottom mr-2"
+      >
         04. What's next?
-      </p>
+      </a>
       <h2 className="text-7xl text-gray-100 font-bold">Get In Touch</h2>
       <p className="max-w-lg mb-8">
         Although I'm not currently looking for any new opportunities, my inbox

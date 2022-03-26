@@ -1,20 +1,24 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { companies } from '../constants/data';
+import { companies, SectionId } from "../constants/data";
+import BounceSeeMore from "./atoms/BounceSeeMore";
 
 export default function ExperienceSection() {
   const [company, setCompany] = useState(companies[0]);
 
   return (
-    <section id="experience" className="max-w-5xl py-24">
+    <section
+      id={SectionId.Experience}
+      className="min-h-screen relative max-w-5xl py-24"
+    >
       <header className="flex items-center gap-3 mb-10 max-w-2xl">
         <div className="w-20 h-0.5 bg-gray-600"></div>
-        <h2>
+        <a href={"#" + SectionId.Experience} className="animated-border-bottom">
           <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
             02.
           </strong>
           <strong className="text-4xl text-gray-100">Where I've Worked</strong>
-        </h2>
+        </a>
         <div className="flex-grow h-0.5 bg-gray-600"></div>
       </header>
       <main>
@@ -44,7 +48,7 @@ export default function ExperienceSection() {
             </li>
           ))}
         </ol>
-        <section className="inline-block py-2 px-4">
+        <section className="inline-block py-2 px-4 ml-6">
           <h3 className="space-x-2">
             <span className="text-gray-200">{company.title}</span>
             <span>|</span>
@@ -67,8 +71,24 @@ export default function ExperienceSection() {
               <li key={r}>{r}</li>
             ))}
           </ul>
+
+          <section className="mt-12 text-gray-50">
+            <figure className="w-96 overflow-hidden rounded-md">
+              <img
+                src="https://previews.123rf.com/images/milkos/milkos2003/milkos200303935/142389596-trabajo-en-equipo-compa%C3%B1eros-de-trabajo-felices-dando-cinco-celebrando-el-%C3%A9xito-empresarial-sentados.jpg"
+                alt=""
+                className="object-cover"
+              />
+            </figure>
+          </section>
         </section>
       </main>
+      <BounceSeeMore
+        text="projects"
+        isLeft={true}
+        targetId={SectionId.Projects}
+        marginLeft={-23}
+      />
     </section>
   );
 }
