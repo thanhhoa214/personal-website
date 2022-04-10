@@ -14,9 +14,26 @@ export default function HeroSection() {
         <br />I build awesome things for the web.
       </h1>
       <p className="max-w-lg mb-12">
-        I'm a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I'm focused on
-        building accessible, human-centered products at Upstatement.
+        I'm a software engineer specializing in building exceptional digital
+        experiences. Currently, I'm focused on building{" "}
+        <a
+          href="https://www.pi.exchange/the-ai-and-analytics-engine"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-block animated-border-bottom"
+        >
+          The AI & Analytics Engine
+        </a>{" "}
+        - an accessible AI product at{" "}
+        <a
+          href="https://pi.exchange"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-block animated-border-bottom"
+        >
+          pi.exchange
+        </a>
+        .
       </p>
 
       <Button size="lg">Check out my résume</Button>

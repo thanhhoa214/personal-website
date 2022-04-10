@@ -72,15 +72,13 @@ export default function ExperienceSection() {
             ))}
           </ul>
 
-          <section className="mt-12 text-gray-50">
-            <figure className="w-96 overflow-hidden rounded-md">
-              <img
-                src="https://previews.123rf.com/images/milkos/milkos2003/milkos200303935/142389596-trabajo-en-equipo-compa%C3%B1eros-de-trabajo-felices-dando-cinco-celebrando-el-%C3%A9xito-empresarial-sentados.jpg"
-                alt=""
-                className="object-cover"
-              />
-            </figure>
-          </section>
+          <figure className="mt-12 text-gray-50">
+            <img
+              src={company.teamThumbnailUrl}
+              alt=""
+              className="h-80 w-auto rounded-lg"
+            />
+          </figure>
         </section>
       </main>
       <BounceSeeMore

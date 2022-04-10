@@ -14,7 +14,7 @@ function App() {
         <Navbar></Navbar>
         <HeroSection></HeroSection>
         <AboutMeSection></AboutMeSection>
-        {/* <ExperienceSection></ExperienceSection>
+        <ExperienceSection></ExperienceSection>
         <ProjectSection></ProjectSection>
         <div className="min-h-screen flex flex-col">
           <ContactSection className="py-12 flex-grow"></ContactSection>
@@ -29,7 +29,7 @@ function App() {
             <br />
             Customized &#38; rebuilt by me
           </footer>
-        </div> */}
+        </div>
       </main>
     </>
   );

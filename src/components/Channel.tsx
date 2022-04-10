@@ -8,6 +8,7 @@ export default function Channel() {
       <div className="fixed bottom-0 left-6 flex flex-col items-center gap-4 text-gray-600">
         <a
           href="https://www.linkedin.com/in/thanhhoa214/"
+          title="https://www.linkedin.com/in/thanhhoa214/"
           target="_blank"
           rel="noreferrer"
           className={childClassName}
@@ -16,6 +17,7 @@ export default function Channel() {
         </a>
         <a
           href="https://t.me/thanhhoa214"
+          title="https://t.me/thanhhoa214"
           target="_blank"
           rel="noreferrer"
           className={childClassName}
@@ -24,6 +26,7 @@ export default function Channel() {
         </a>
         <a
           href="https://github.com/thanhhoa214"
+          title="https://github.com/thanhhoa214"
           target="_blank"
           rel="noreferrer"
           className={childClassName}

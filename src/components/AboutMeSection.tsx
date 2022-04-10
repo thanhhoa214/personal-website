@@ -18,28 +18,28 @@ export default function AboutMeSection() {
           <div className="flex-grow h-0.5 bg-gray-600"></div>
         </header>
         <p className="mb-4">
-          Hello! My name is Brittany and I enjoy creating things that live on
-          the internet. My interest in web development started back in 2012 when
-          I decided to try editing custom Tumblr themes — turns out hacking
-          together a custom reblog button taught me a lot about HTML/CSS!
+          Hello! My name is Hoa Nguyen (Rin) - a problem solver with a
+          demonstrated history of working in the information technology and
+          services industry. Love keeping my brain up to date with the latest
+          front-end technologies. Teamwork is one of what I'm proud of
         </p>
+
+        <q className="block mb-4">
+          Choose the right team, we grow, we solve together
+        </q>
+
         <p className="mb-4">
           Fast-forward to today, and I've had the privilege of working at an
-          advertising agency, a start-up, a huge corporation, and a student-led
-          design studio. My main focus these days is building accessible,
-          inclusive products and digital experiences at Upstatement for a
-          variety of clients.
-          <p>
-            I also recently launched a course that covers everything you need to
-            build a web app with the Spotify API using Node/React.
-          </p>
+          AI-based product company, a start-up with brilliant colleges, with
+          vision reducing the barriers and bringing AI accessible for everyone.
+          My main focus these days is building accessible features, contributed
+          UI/UX feedbacks and improving our most-proud AI&amp;A engine.
           <p>Here are a few technologies I've been working with recently:</p>
           <ul className="mt-8 flex flex-wrap">
+            <li className="w-1/2">Angular (RxJS, NGXS, RxState)</li>
+            <li className="w-1/2">Angular Material, ng-zorro-antd</li>
+            <li className="w-1/2">Bootstrap, TailwindCSS</li>
             <li className="w-1/2">JavaScript (ES6+)</li>
-            <li className="w-1/2">TypeScript</li>
-            <li className="w-1/2">React</li>
-            <li className="w-1/2">Node.js</li>
-            <li className="w-1/2">WordPress</li>
           </ul>
         </p>
       </article>

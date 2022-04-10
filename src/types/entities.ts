@@ -3,6 +3,7 @@ export interface Company {
   name: string;
   url: string;
   thumbnailUrl: string;
+  teamThumbnailUrl: string;
   title: string;
   from: string;
   to: string;
