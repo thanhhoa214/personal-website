@@ -1,8 +1,6 @@
 import { SectionId } from "../constants/data";
 import BounceSeeMore from "./atoms/BounceSeeMore";
 
-import Button from "./atoms/Button";
-
 export default function HeroSection() {
   return (
     <section className="py-16 px-4 md:px-16 h-main relative">
@@ -36,7 +34,14 @@ export default function HeroSection() {
         .
       </p>
 
-      <Button size="lg">Check out my résume</Button>
+      <a
+        href="/Hoa-Nguyen-resume.pdf"
+        target="_blank"
+        rel="noreferrer"
+        className="border border-solid border-neon-400 rounded text-neon-500 hover:bg-opacity-30 hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu py-3 px-4 text-xl"
+      >
+        Check out my résume
+      </a>
       <div className="hidden md:block absolute top-20 right-96 -rotate-6 w-20 h-20 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-bounce"></div>
       <div className="hidden md:block absolute top-20 right-28 rotate-45 w-40 h-40 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-ping"></div>
       <div className="hidden md:block absolute top-80 right-24 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse"></div>
