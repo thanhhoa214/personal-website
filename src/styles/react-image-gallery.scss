@@ -1,0 +1,27 @@
+.image-gallery,
+.image-gallery-content,
+.image-gallery-slide-wrapper,
+.image-gallery-swipe,
+.image-gallery-slides,
+.image-gallery-slide,
+.image-gallery-image {
+  @apply h-full;
+}
+
+.image-gallery-slide {
+  @apply cursor-default;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+  @apply px-5 top-3/4;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  @apply h-10 w-5;
+}
+
+.image-gallery-bullets {
+  @apply top-5 left-5 right-auto bottom-auto w-auto;
+}

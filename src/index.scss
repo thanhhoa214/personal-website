@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+// Required by library "react-image-gallery"
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+
+@import "src/styles/react-image-gallery.scss";
 @import "src/styles/scrollbar.scss";
 
 body {
@@ -86,6 +90,14 @@ code {
 
   &:hover {
     @apply text-neon-600;
+  }
+}
+
+.btn {
+  @apply border border-solid border-neon-400 rounded text-neon-500 hover:bg-opacity-30 hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu;
+
+  &.xl {
+    @apply py-4 px-16 text-2xl;
   }
 }
 

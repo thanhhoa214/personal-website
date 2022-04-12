@@ -10,10 +10,17 @@ export interface Company {
   responsibilities: string[];
 }
 
+export interface DescriptiveImage {
+  title: string;
+  url: string;
+  description: string;
+}
+
 export interface Project {
-  company: Company;
+  company?: Company;
   type: string;
   name: string;
   description: string;
-  technologies: { name: string; url: string; description: string }[];
+  thumbnails: DescriptiveImage[];
+  technologies: DescriptiveImage[];
 }

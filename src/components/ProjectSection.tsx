@@ -1,5 +1,10 @@
-import { projects, SectionId } from "../constants/data";
-import { Project } from "../types/entities";
+import ImageGallery from 'react-image-gallery';
+
+import {
+  projects,
+  SectionId,
+} from '../constants/data';
+import { Project } from '../types/entities';
 
 export default function ProjectSection() {
   return (
@@ -36,11 +41,33 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
   return (
     <li className={`relative mb-12 ${isLeft ? "flex flex-row-reverse" : ""}`}>
       <figure className="inline-block w-2/3 h-96 bg-navy-900">
-        <img
-          src="/images/projects/lifeon/post-detail.png"
-          alt="Life On - Post Detail Screen"
-          className="h-full object-contain mx-auto"
-        />
+        <ImageGallery
+          items={project.thumbnails.map((t) => ({
+            originalTitle: t.title,
+            original: t.url,
+            originalAlt: t.description,
+            bulletClass: "top-0",
+            renderItem: (item) => (
+              <>
+                <section className="absolute left-6 top-14 text-left whitespace-normal">
+                  <strong className="text-gray-300">
+                    {item.originalTitle}
+                  </strong>
+                  <p className="text-sm leading-4 mt-3 w-72">
+                    {item.originalAlt}
+                  </p>
+                </section>
+                <img
+                  src={item.original}
+                  alt={item.originalAlt}
+                  title={item.originalTitle}
+                  className="h-full object-contain ml-auto mr-36"
+                />
+              </>
+            ),
+          }))}
+          showBullets={true}
+        ></ImageGallery>
       </figure>
       <section
         className={`absolute top-0 t-8 w-2/5 py-4 -ml-56 ${
@@ -52,10 +79,10 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           {project.name}
         </h3>
         <p
-          className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6"
+          className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify "
           dangerouslySetInnerHTML={{ __html: project.description }}
         ></p>
-        <ol className="space-x-6 text-white">
+        <ol className="flex flex-wrap justify-end gap-4 text-white">
           {project.technologies.map((tech) => (
             <li className="inline-block">
               <a
@@ -65,7 +92,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
                 rel="noreferrer"
                 className="rounded py-1 px-2 link"
               >
-                {tech.name}
+                {tech.title}
               </a>
             </li>
           ))}

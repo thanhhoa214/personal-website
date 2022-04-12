@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { companies, SectionId } from "../constants/data";
-import BounceSeeMore from "./atoms/BounceSeeMore";
+import {
+  companies,
+  SectionId,
+} from '../constants/data';
+import BounceSeeMore from './atoms/BounceSeeMore';
 
 export default function ExperienceSection() {
   const [company, setCompany] = useState(companies[0]);
@@ -9,7 +12,7 @@ export default function ExperienceSection() {
   return (
     <section
       id={SectionId.Experience}
-      className="min-h-screen relative max-w-5xl py-24"
+      className="min-h-screen relative max-w-5xl py-10"
     >
       <header className="flex items-center gap-3 mb-10 max-w-2xl">
         <div className="w-20 h-0.5 bg-gray-600"></div>

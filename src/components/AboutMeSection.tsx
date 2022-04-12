@@ -1,5 +1,5 @@
-import { SectionId } from "../constants/data";
-import BounceSeeMore from "./atoms/BounceSeeMore";
+import { SectionId } from '../constants/data';
+import BounceSeeMore from './atoms/BounceSeeMore';
 
 export default function AboutMeSection() {
   return (
@@ -21,16 +21,19 @@ export default function AboutMeSection() {
           Hello! My name is Hoa Nguyen (Rin) - a problem solver with a
           demonstrated history of working in the information technology and
           services industry. Love keeping my brain up to date with the latest
-          front-end technologies. Teamwork is one of what I'm proud of
+          front-end technologies. My love quote
         </p>
-
-        <q className="block mb-4">
-          Choose the right team, we grow, we solve together
-        </q>
+        <p className="block w-96 mx-auto mb-4 text-center">
+          <q className="block text-gray-100 font-semibold">
+            Coming together is a beginning, staying together is progress, and
+            working together is success
+          </q>
+          <em>Henry Ford</em>
+        </p>
 
         <p className="mb-4">
           Fast-forward to today, and I've had the privilege of working at an
-          AI-based product company, a start-up with brilliant colleges, with
+          AI-based product company, a start-up with brilliant colleagues, with
           vision reducing the barriers and bringing AI accessible for everyone.
           My main focus these days is building accessible features, contributed
           UI/UX feedbacks and improving our most-proud AI&amp;A engine.

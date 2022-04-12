@@ -1,4 +1,7 @@
-import { Company, Project } from "../types/entities";
+import {
+  Company,
+  Project,
+} from '../types/entities';
 
 export const enum SectionId {
   About = "about",
@@ -38,7 +41,7 @@ export const companies: Company[] = [
       "Led team with 3 members when working part-time",
       "Built and deployed 4+ projects by using Angular and Ionic",
       "Built mobile CI/CD system by utilizing GitlabCI, GitlabRunner, Fastlane",
-      "Speaker in 4 technical seminars (NGXS (2), RxJS, GraphQLCodegen)",
+      "Host 4+ internal technical seminars (NGXS (2), RxJS, GraphQLCodegen)",
       "Composed Front-end Coding Guidelines for entire company use",
     ],
   },
@@ -48,75 +51,158 @@ export const projects: Project[] = [
     company: companies[1],
     type: "Featured Project",
     name: "Hybrid Interior Design App",
-    description: `Interior Design Project Interior Design for Vietnam and Korean
+    description: `Interior Design Project for both Vietnam and Korean
     marketplaces provides the ability to register for design and
     construction services, creating their services with chatting and
-    purchasing, combines of small CRM and CMS.
-    <br /> Developed a hybrid mobile application using <a
-    href="https://ionic.io/"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-block ml-1 text-gray-200 font-semibold animated-border-bottom"
-  >
-    Ionic 5
-  </a>
-  <span className="mx-1">with</span>
-  <a
-    href="https://angular.io/"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-block text-gray-200 font-semibold animated-border-bottom"
-  >
-    Angular 11
-  </a>`,
+    purchasing, combines of small CRM and CMS`,
+    thumbnails: [
+      {
+        title: "Login Screen",
+        url: "/images/projects/lifeon/login.png",
+        description:
+          "JWT for authentication. Supported logging in with Facebook and Zalo natively in both Android and iOS devices",
+      },
+      {
+        title: "Home Screen (1)",
+        url: "/images/projects/lifeon/home-1.png",
+        description:
+          "Kick-off your dream house with simple steps. Pick a dream house design, contact your potential constructors directly and let's us take care the rest",
+      },
+      {
+        title: "Home Screen (2)",
+        url: "/images/projects/lifeon/home-2.png",
+        description:
+          "A marketplace application with multiple languages, multiple roles and numbers of awesome features to explore...",
+      },
+      {
+        title: "Design Detail Screen (1)",
+        url: "/images/projects/lifeon/design-detail-1.png",
+        description:
+          "Like, bookmark, discuss with like-minded finders, put a review or share the design on various social channels",
+      },
+      {
+        title: "Design Detail Screen (2)",
+        url: "/images/projects/lifeon/design-detail-2.png",
+        description:
+          "Connect with potential constructors to actualize your design right after 1 touch",
+      },
+      {
+        title: "Cart Screen",
+        url: "/images/projects/lifeon/cart.png",
+        description:
+          "Put whatever you love into the cart, checkout mindlessly with only selected like Shopee",
+      },
+      {
+        title: "Payment Screen",
+        url: "/images/projects/lifeon/payment.png",
+        description:
+          "Quickly checkout through VNPay online payment and get your design right the time",
+      },
+      {
+        title: "Posts Surfing Screen",
+        url: "/images/projects/lifeon/post-list.png",
+        description:
+          "Check reviews and shares from design finders, get more insights before sign in the contract",
+      },
+      {
+        title: "Post Detail Screen",
+        url: "/images/projects/lifeon/post-detail.png",
+        description:
+          "Mimic the Facebook comment mechanism, reply nested reply, collapsible, real-time and handy",
+      },
+      {
+        title: "Settings Screen",
+        url: "/images/projects/lifeon/setting.png",
+        description:
+          "Integrated settings includes language, password, saved design, and so on",
+      },
+    ],
     technologies: [
       {
-        name: "Angular 10",
+        title: "Angular 10",
         url: "http://angular.io/",
         description: "High-scalable javascript framework",
       },
       {
-        name: "Ionic 4",
+        title: "Ionic 4",
         url: "http://ionic.io/",
         description: "Hybrid mobile framework",
+      },
+      {
+        title: "Apollo GraphQL",
+        url: "https://apollo-angular.com/docs/",
+        description: "Ultra-flexible GraphQL client for Angular",
+      },
+      {
+        title: "Fastlane",
+        url: "https://fastlane.tools/",
+        description: "Simplifying Android and iOS deployment",
+      },
+      {
+        title: "Gitlab CI/CD",
+        url: "https://docs.gitlab.com/ee/ci/",
+        description: "Build local mobile CI/CD by hand-shaking with Fastlane",
       },
     ],
   },
   {
     company: companies[1],
     type: "Featured Project",
-    name: "Hybrid Interior Design App",
-    description: `Interior Design Project Interior Design for Vietnam and Korean
-    marketplaces provides the ability to register for design and
-    construction services, creating their services with chatting and
-    purchasing, combines of small CRM and CMS.
-    <br /> Developed a hybrid mobile application using <a
-    href="https://ionic.io/"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-block ml-1 text-gray-200 font-semibold animated-border-bottom"
-  >
-    Ionic 5
-  </a>
-  <span className="mx-1">with</span>
-  <a
-    href="https://angular.io/"
-    target="_blank"
-    rel="noreferrer"
-    className="inline-block text-gray-200 font-semibold animated-border-bottom"
-  >
-    Angular 11
-  </a>`,
+    name: "All-in-one Online Library Platform",
+    description: `Online library platform helps students, librarians, and publishers can reach each other easier, synchronously either online, offline or multiple devices. Fully responsive from the smallest phone, tablet to the latest high-resolution like Mac`,
+    thumbnails: [],
     technologies: [
       {
-        name: "Angular 10",
+        title: "Angular 10",
         url: "http://angular.io/",
         description: "High-scalable javascript framework",
       },
       {
-        name: "Ionic 4",
+        title: "Ionic 4",
         url: "http://ionic.io/",
         description: "Hybrid mobile framework",
+      },
+      {
+        title: "Electron",
+        url: "https://www.electronjs.org/",
+        description:
+          "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+      },
+    ],
+  },
+  {
+    type: "IoT Project",
+    name: "Self-driving Car Solution",
+    description: `Autonomous Self-driving Car was a constraint to implement a car model with the ability to detect lanes,
+    traffic signs, and traffic lights for research purposes. As a team lead, I directly establish meetings with supervisors 
+    and customers. I use Angular for Web and Mobile Application on Nx workspace for maximize the reusability`,
+    thumbnails: [],
+    technologies: [
+      {
+        title: "Angular 10",
+        url: "http://angular.io/",
+        description: "High-scalable javascript framework",
+      },
+      {
+        title: "Ionic 4",
+        url: "http://ionic.io/",
+        description: "Hybrid mobile framework",
+      },
+      {
+        title: "TailwindCSS",
+        url: "https://tailwindcss.com/",
+        description: "A utility-first CSS framework",
+      },
+      {
+        title: "PWA",
+        url: "https://web.dev/progressive-web-apps/",
+        description:
+          "Web apps that have been designed to more capable, reliable, and installable",
+      },
+      {
+        title: "Taiga UI",
+        url: "https://taiga-ui.dev/",
+        description: "UI library for Angular components",
       },
     ],
   },
