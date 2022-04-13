@@ -13,7 +13,7 @@ export interface Company {
 export interface DescriptiveImage {
   title: string;
   url: string;
-  description: string;
+  description?: string;
 }
 
 export interface Project {

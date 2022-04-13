@@ -9,7 +9,7 @@ import { Project } from '../types/entities';
 export default function ProjectSection() {
   return (
     <section id={SectionId.Projects} className="mx-auto max-w-5xl">
-      <header className="flex items-center gap-3 mb-10 max-w-2xl">
+      <header className="flex items-center gap-3 mb-20 max-w-2xl">
         <div className="w-20 h-0.5 bg-gray-600"></div>
         <a href={"#" + SectionId.Projects} className="animated-border-bottom">
           <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
@@ -29,6 +29,11 @@ export default function ProjectSection() {
           ))}
         </ol>
       </main>
+      <p className="text-center">
+        <strong className="text-gray-300">
+          It's not all. The website is in progress...
+        </strong>
+      </p>
     </section>
   );
 }
@@ -39,7 +44,7 @@ interface ProjectItemProps {
 }
 function ProjectItem({ project, isLeft }: ProjectItemProps) {
   return (
-    <li className={`relative mb-12 ${isLeft ? "flex flex-row-reverse" : ""}`}>
+    <li className={`relative mb-20 ${isLeft ? "flex flex-row-reverse" : ""}`}>
       <figure className="inline-block w-2/3 h-96 bg-navy-900">
         <ImageGallery
           items={project.thumbnails.map((t) => ({
@@ -71,7 +76,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
       </figure>
       <section
         className={`absolute top-0 t-8 w-2/5 py-4 -ml-56 ${
-          isLeft ? "right-1/2" : "right-0 text-right"
+          isLeft ? "right-[60%]" : "right-0 text-right"
         }`}
       >
         <p className="font-ubuntu text-gray-500">{project.type}</p>
@@ -82,7 +87,11 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify "
           dangerouslySetInnerHTML={{ __html: project.description }}
         ></p>
-        <ol className="flex flex-wrap justify-end gap-4 text-white">
+        <ol
+          className={`flex flex-wrap w-5/6 gap-4 text-white ${
+            isLeft ? "ml-0 mr-auto" : "ml-auto mr-0 justify-end"
+          }`}
+        >
           {project.technologies.map((tech) => (
             <li className="inline-block">
               <a

@@ -33,16 +33,16 @@ export const companies: Company[] = [
     name: "NNG Company Ltd.",
     url: "http://nng.bz",
     thumbnailUrl: "/images/companies/nng.png",
-    teamThumbnailUrl: "/images/companies/nng-team.png",
+    teamThumbnailUrl: "/images/companies/nng-team.jpg",
     title: "Front-end Developer",
     from: "Mar 2020",
     to: "Sep 2021",
     responsibilities: [
-      "Led team with 3 members when working part-time",
       "Built and deployed 4+ projects by using Angular and Ionic",
       "Built mobile CI/CD system by utilizing GitlabCI, GitlabRunner, Fastlane",
       "Host 4+ internal technical seminars (NGXS (2), RxJS, GraphQLCodegen)",
       "Composed Front-end Coding Guidelines for entire company use",
+      "Led team with 3 members when working part-time",
     ],
   },
 ];
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     description: `Interior Design Project for both Vietnam and Korean
     marketplaces provides the ability to register for design and
     construction services, creating their services with chatting and
-    purchasing, combines of small CRM and CMS`,
+    purchasing, combines of small CRM and CMS.`,
     thumbnails: [
       {
         title: "Login Screen",
@@ -145,38 +145,67 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    company: companies[1],
-    type: "Featured Project",
-    name: "All-in-one Online Library Platform",
-    description: `Online library platform helps students, librarians, and publishers can reach each other easier, synchronously either online, offline or multiple devices. Fully responsive from the smallest phone, tablet to the latest high-resolution like Mac`,
-    thumbnails: [],
-    technologies: [
-      {
-        title: "Angular 10",
-        url: "http://angular.io/",
-        description: "High-scalable javascript framework",
-      },
-      {
-        title: "Ionic 4",
-        url: "http://ionic.io/",
-        description: "Hybrid mobile framework",
-      },
-      {
-        title: "Electron",
-        url: "https://www.electronjs.org/",
-        description:
-          "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
-      },
-    ],
-  },
+  // {
+  //   company: companies[1],
+  //   type: "Featured Project",
+  //   name: "All-in-one Online Library Platform",
+  //   description: `Online library platform helps students, librarians, and publishers can reach each other easier, synchronously either online, offline or multiple devices. Fully responsive from the smallest phone, tablet to the latest high-resolution like Mac.`,
+  //   thumbnails: [],
+  //   technologies: [
+  //     {
+  //       title: "Angular 10",
+  //       url: "http://angular.io/",
+  //       description: "High-scalable javascript framework",
+  //     },
+  //     {
+  //       title: "Ionic 4",
+  //       url: "http://ionic.io/",
+  //       description: "Hybrid mobile framework",
+  //     },
+  //     {
+  //       title: "Electron",
+  //       url: "https://www.electronjs.org/",
+  //       description:
+  //         "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+  //     },
+  //   ],
+  // },
   {
     type: "IoT Project",
     name: "Self-driving Car Solution",
     description: `Autonomous Self-driving Car was a constraint to implement a car model with the ability to detect lanes,
-    traffic signs, and traffic lights for research purposes. As a team lead, I directly establish meetings with supervisors 
-    and customers. I use Angular for Web and Mobile Application on Nx workspace for maximize the reusability`,
-    thumbnails: [],
+    traffic signs, and traffic lights for research purposes. Using Angular for both Web and Mobile Apps on Nx workspace for maximize the reusability.`,
+    thumbnails: [
+      {
+        title: "Mobile - Login Screen",
+        url: "/images/projects/avc/login.png",
+      },
+      {
+        title: "Mobile - Car List Screen",
+        url: "/images/projects/avc/car-list.png",
+        description: "WebSocket integrated",
+      },
+      {
+        title: "Mobile - Car Detail Screen",
+        url: "/images/projects/avc/car-detail.png",
+      },
+      {
+        title: "Mobile - Issue Detail Screen",
+        url: "/images/projects/avc/issue-detail.png",
+      },
+      {
+        title: "Mobile - Notification Screen",
+        url: "/images/projects/avc/notification-list.png",
+      },
+      {
+        title: "Mobile - Profile Screen",
+        url: "/images/projects/avc/profile.png",
+      },
+      {
+        title: "Mobile - Forgot Password Screen",
+        url: "/images/projects/avc/forgot-password.png",
+      },
+    ],
     technologies: [
       {
         title: "Angular 10",
