@@ -57,6 +57,11 @@ export const projects: Project[] = [
     purchasing, combines of small CRM and CMS.`,
     thumbnails: [
       {
+        title: "User Flows",
+        url: "/images/projects/lifeon/record.mp4",
+        description: "Simple login with Zalo flow",
+      },
+      {
         title: "Login Screen",
         url: "/images/projects/lifeon/login.png",
         description:

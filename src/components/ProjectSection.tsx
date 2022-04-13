@@ -1,4 +1,4 @@
-import ImageGallery from 'react-image-gallery';
+import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 
 import {
   projects,
@@ -43,6 +43,27 @@ interface ProjectItemProps {
   isLeft: boolean;
 }
 function ProjectItem({ project, isLeft }: ProjectItemProps) {
+  const renderImage = (item: ReactImageGalleryItem) => (
+    <>
+      <section className="absolute left-6 top-14 text-left whitespace-normal">
+        <strong className="text-gray-300">{item.originalTitle}</strong>
+        <p className="text-sm leading-4 mt-3 w-72">{item.originalAlt}</p>
+      </section>
+      {item.original.endsWith("mp4") ? (
+        <video controls className="h-full object-contain ml-auto mr-36">
+          <source src={item.original} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          src={item.original}
+          alt={item.originalAlt}
+          title={item.originalTitle}
+          className="h-full object-contain ml-auto mr-36"
+        />
+      )}
+    </>
+  );
+
   return (
     <li className={`relative mb-20 ${isLeft ? "flex flex-row-reverse" : ""}`}>
       <figure className="inline-block w-2/3 h-96 bg-navy-900">
@@ -52,24 +73,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
             original: t.url,
             originalAlt: t.description,
             bulletClass: "top-0",
-            renderItem: (item) => (
-              <>
-                <section className="absolute left-6 top-14 text-left whitespace-normal">
-                  <strong className="text-gray-300">
-                    {item.originalTitle}
-                  </strong>
-                  <p className="text-sm leading-4 mt-3 w-72">
-                    {item.originalAlt}
-                  </p>
-                </section>
-                <img
-                  src={item.original}
-                  alt={item.originalAlt}
-                  title={item.originalTitle}
-                  className="h-full object-contain ml-auto mr-36"
-                />
-              </>
-            ),
+            renderItem: renderImage,
           }))}
           showBullets={true}
         ></ImageGallery>
