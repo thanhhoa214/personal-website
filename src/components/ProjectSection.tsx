@@ -1,4 +1,5 @@
 import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
+import ReactTooltip from 'react-tooltip';
 
 import {
   projects,
@@ -43,36 +44,47 @@ interface ProjectItemProps {
   isLeft: boolean;
 }
 function ProjectItem({ project, isLeft }: ProjectItemProps) {
-  const renderImage = (item: ReactImageGalleryItem) => (
-    <>
-      <section className="absolute left-6 top-14 text-left whitespace-normal">
-        <strong className="text-gray-300">{item.originalTitle}</strong>
-        <p className="text-sm leading-4 mt-3 w-72">{item.originalAlt}</p>
-      </section>
-      {item.original.endsWith("mp4") ? (
-        <video controls className="h-full object-contain ml-auto mr-36">
-          <source src={item.original} type="video/mp4" />
-        </video>
-      ) : (
-        <img
-          src={item.original}
-          alt={item.originalAlt}
-          title={item.originalTitle}
-          className="h-full object-contain ml-auto mr-36"
-        />
-      )}
-    </>
-  );
+  const renderImage = (item: ReactImageGalleryItem) => {
+    const mediaClass = isLeft ? "ml-0 mr-auto" : "ml-auto mr-0";
+    return (
+      <>
+        <section
+          className={`absolute top-12 whitespace-normal text-gray-300 bg-gray-900 bg-opacity-80 px-4 py-6 rounded-md ${
+            isLeft ? "right-4 text-right" : "left-4 text-left"
+          }`}
+        >
+          <strong>{item.originalTitle}</strong>
+          <p className="text-sm leading-4 mt-3 w-72">{item.originalAlt}</p>
+        </section>
+        {item.original.endsWith("mp4") ? (
+          <video controls className={`h-full object-contain ${mediaClass}`}>
+            <source src={item.original} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={item.original}
+            alt={item.originalAlt}
+            title={item.originalTitle}
+            className={`h-full object-contain ${mediaClass}`}
+          />
+        )}
+      </>
+    );
+  };
 
   return (
-    <li className={`relative mb-20 ${isLeft ? "flex flex-row-reverse" : ""}`}>
+    <li
+      className={`relative mb-20 ${
+        isLeft ? "flex flex-row-reverse left" : "right"
+      }`}
+    >
       <figure className="inline-block w-2/3 h-96 bg-navy-900">
         <ImageGallery
           items={project.thumbnails.map((t) => ({
             originalTitle: t.title,
             original: t.url,
             originalAlt: t.description,
-            bulletClass: "top-0",
+            bulletClass: `top-0 ${isLeft ? "right-0" : "left-0"}`,
             renderItem: renderImage,
           }))}
           showBullets={true}
@@ -96,12 +108,13 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
             isLeft ? "ml-0 mr-auto" : "ml-auto mr-0 justify-end"
           }`}
         >
+          <ReactTooltip place="top" type="light" effect="float" />
           {project.technologies.map((tech) => (
             <li className="inline-block">
               <a
                 href={tech.url}
                 target="_blank"
-                title={tech.description}
+                data-tip={tech.description}
                 rel="noreferrer"
                 className="rounded py-1 px-2 link"
               >

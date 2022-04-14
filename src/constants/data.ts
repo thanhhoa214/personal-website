@@ -182,8 +182,39 @@ export const projects: Project[] = [
     traffic signs, and traffic lights for research purposes. Using Angular for both Web and Mobile Apps on Nx workspace for maximize the reusability.`,
     thumbnails: [
       {
-        title: "Mobile - Login Screen",
-        url: "/images/projects/avc/login.png",
+        title: "Web - Car List Page",
+        url: "/images/projects/avc/web-car-list.png",
+        description:
+          "Manage core entity in the platform, assign, activate, deactivate, check status and so on",
+      },
+      {
+        title: "Web - Create Manager Page",
+        url: "/images/projects/avc/web-create-manager.png",
+        description:
+          "Create manager for managing cars, staffs, and tracking issues",
+      },
+      {
+        title: "Web - Train Model by ZIP Page",
+        url: "/images/projects/avc/web-train-by-zip.png",
+        description:
+          "We built the pipeline for automatically training the detection model based on image sources",
+      },
+      {
+        title: "Web - Label Image Page (1)",
+        url: "/images/projects/avc/web-label-image-1.png",
+        description:
+          "Utilize <a href='https://igorlino.github.io/angular-annotorious/' target='_blank' rel='noreferrer' class='link'>Angular Annotorious</a> to label images for retraining the model",
+      },
+      {
+        title: "Web - Label Image Page (2)",
+        url: "/images/projects/avc/web-label-image-2.png",
+        description:
+          "Utilize <a href='https://igorlino.github.io/angular-annotorious/' target='_blank' rel='noreferrer' class='link'>Angular Annotorious</a> to label images for retraining the model",
+      },
+      {
+        title: "Web - Dashboard Page",
+        url: "/images/projects/avc/web-dashboard.png",
+        description: "System generic information gathering and visualization",
       },
       {
         title: "Mobile - Car List Screen",
@@ -193,29 +224,45 @@ export const projects: Project[] = [
       {
         title: "Mobile - Car Detail Screen",
         url: "/images/projects/avc/car-detail.png",
+        description:
+          "WebSocket integrated to start, stop or receive command realtime",
       },
       {
         title: "Mobile - Issue Detail Screen",
         url: "/images/projects/avc/issue-detail.png",
-      },
-      {
-        title: "Mobile - Notification Screen",
-        url: "/images/projects/avc/notification-list.png",
-      },
-      {
-        title: "Mobile - Profile Screen",
-        url: "/images/projects/avc/profile.png",
-      },
-      {
-        title: "Mobile - Forgot Password Screen",
-        url: "/images/projects/avc/forgot-password.png",
+        description:
+          "When the car has an issue, that issue & according notification will be fetched right the time",
       },
     ],
     technologies: [
       {
-        title: "Angular 10",
+        title: "IoT & AI",
+        url: "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      },
+      {
+        title: "Nx Workspace",
+        url: "https://nx.dev/",
+        description: "Smart, Fast and Extensible Build System",
+      },
+      {
+        title: "Angular 11",
         url: "http://angular.io/",
         description: "High-scalable javascript framework",
+      },
+      {
+        title: "SignalR",
+        url: "https://www.npmjs.com/package/@microsoft/signalr",
+        description: "Microsoft SignalR for client-side Javascript",
+      },
+      {
+        title: "Angular Annotorious",
+        url: "https://igorlino.github.io/angular-annotorious/",
+        description: "Image labelling library for Angular",
+      },
+      {
+        title: "Taiga UI",
+        url: "https://taiga-ui.dev/",
+        description: "UI library for Angular components",
       },
       {
         title: "Ionic 4",
@@ -226,17 +273,6 @@ export const projects: Project[] = [
         title: "TailwindCSS",
         url: "https://tailwindcss.com/",
         description: "A utility-first CSS framework",
-      },
-      {
-        title: "PWA",
-        url: "https://web.dev/progressive-web-apps/",
-        description:
-          "Web apps that have been designed to more capable, reliable, and installable",
-      },
-      {
-        title: "Taiga UI",
-        url: "https://taiga-ui.dev/",
-        description: "UI library for Angular components",
       },
     ],
   },

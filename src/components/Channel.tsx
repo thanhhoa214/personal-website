@@ -1,14 +1,19 @@
-import { BsGithub } from "react-icons/bs";
-import { FaTelegramPlane, FaLinkedinIn } from "react-icons/fa";
+import { BsGithub } from 'react-icons/bs';
+import {
+  FaLinkedinIn,
+  FaTelegramPlane,
+} from 'react-icons/fa';
+import ReactTooltip from 'react-tooltip';
 
 export default function Channel() {
   const childClassName = "transition-colors hover:text-gray-200";
   return (
     <div className="hidden md:block">
       <div className="fixed bottom-0 left-6 flex flex-col items-center gap-4 text-gray-600">
+        <ReactTooltip place="top" type="light" effect="float" />
         <a
           href="https://www.linkedin.com/in/thanhhoa214/"
-          title="https://www.linkedin.com/in/thanhhoa214/"
+          data-tip="🍀 &nbsp; View my Linkedin profile (thanhhoa214)"
           target="_blank"
           rel="noreferrer"
           className={childClassName}
@@ -17,7 +22,7 @@ export default function Channel() {
         </a>
         <a
           href="https://t.me/thanhhoa214"
-          title="https://t.me/thanhhoa214"
+          data-tip="📜 &nbsp; Send me a Telegram direct message @thanhhoa214"
           target="_blank"
           rel="noreferrer"
           className={childClassName}
@@ -26,7 +31,7 @@ export default function Channel() {
         </a>
         <a
           href="https://github.com/thanhhoa214"
-          title="https://github.com/thanhhoa214"
+          data-tip="🎁 &nbsp; Check out my projects (thanhhoa214)"
           target="_blank"
           rel="noreferrer"
           className={childClassName}

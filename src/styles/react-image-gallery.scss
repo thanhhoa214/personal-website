@@ -9,7 +9,7 @@
 }
 
 .image-gallery-slide {
-  @apply cursor-default;
+  @apply cursor-default px-24;
 }
 
 .image-gallery-left-nav,
@@ -22,6 +22,16 @@
   @apply h-10 w-5;
 }
 
-.image-gallery-bullets {
-  @apply top-5 left-5 right-auto bottom-auto w-auto;
+#projects {
+  .image-gallery-bullets {
+    @apply top-5 bottom-auto w-auto;
+  }
+
+  .left .image-gallery-bullets {
+    @apply right-5 left-auto;
+  }
+
+  .right .image-gallery-bullets {
+    @apply left-5 right-auto;
+  }
 }
