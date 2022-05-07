@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="py-16 px-4 md:px-16 h-main relative">
       <p className="font-ubuntu text-sm md:text-xl text-neon-500">
-        I'm a Front-end Developer
+        👋 I'm a Front-end Developer
       </p>
       <div className="border-b border-neon-500 border-solid w-24 mb-6"></div>
       <h1 className="text-2xl md:text-6xl font-bold mb-6 leading-tight">
