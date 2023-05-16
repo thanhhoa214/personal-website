@@ -6,7 +6,7 @@ module.exports = {
         ubuntu: '"Ubuntu Mono"',
       },
       height: {
-        main: 'calc(100vh - 70px)'
+        main: "calc(100vh - 70px)",
       },
       colors: {
         navy: {
@@ -32,6 +32,18 @@ module.exports = {
           700: "#50ebc6",
           800: "#46e1bc",
           900: "#3cd7b2",
+        },
+        solarized: {
+          50: "#FFFFFF",
+          100: "#FFFFFF",
+          200: "#FFFFFF",
+          300: "#FFFFFF",
+          400: "#FFFFFF",
+          500: "#FDF6E3",
+          600: "#F9E5AF",
+          700: "#F6D47A",
+          800: "#F2C446",
+          900: "#eee8d5",
         },
       },
     },

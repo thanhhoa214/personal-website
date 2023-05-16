@@ -1,3 +1,5 @@
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 import { SectionId } from '../constants/data';
 
 export default function ContactSection({ className }: { className: string }) {
@@ -16,12 +18,18 @@ export default function ContactSection({ className }: { className: string }) {
       <p className="max-w-lg mb-8">
         I'm actively looking for new opportunities at a Blockchain startup
         company, my inbox is always opening. Whether you have a question or just
-        want to say "Hi", I'll try my best to get back to you!
+        want to say&nbsp;
+        <strong className="px-2 py-1 rounded-md bg-gray-700 text-gray-100">
+          Hi 👋
+        </strong>
+        , I'll try my best to get back to you!
       </p>
 
-      <a href="mailto:thanhthanhhoa123@gmail.com" className="btn xl">
-        Say Hello
-      </a>
+      <AnimationOnScroll animateIn="animate__wobble">
+        <a href="mailto:thanhthanhhoa123@gmail.com" className="btn xl">
+          Say Hello 🎁
+        </a>
+      </AnimationOnScroll>
     </section>
   );
 }

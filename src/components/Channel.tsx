@@ -13,7 +13,7 @@ export default function Channel() {
         <ReactTooltip place="top" type="light" effect="float" />
         <a
           href="https://www.linkedin.com/in/thanhhoa214/"
-          data-tip="🍀 &nbsp; View my Linkedin profile (thanhhoa214)"
+          data-tip="🍀 View my Linkedin profile (thanhhoa214)"
           target="_blank"
           rel="noreferrer"
           className={childClassName}
@@ -22,7 +22,7 @@ export default function Channel() {
         </a>
         <a
           href="https://t.me/thanhhoa214"
-          data-tip="📜 &nbsp; Send me a Telegram direct message @thanhhoa214"
+          data-tip="💬 Send me a Telegram DM @thanhhoa214"
           target="_blank"
           rel="noreferrer"
           className={childClassName}
@@ -31,7 +31,7 @@ export default function Channel() {
         </a>
         <a
           href="https://github.com/thanhhoa214"
-          data-tip="🎁 &nbsp; Check out my projects (thanhhoa214)"
+          data-tip="🎁 Check out my projects (thanhhoa214)"
           target="_blank"
           rel="noreferrer"
           className={childClassName}

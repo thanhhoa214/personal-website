@@ -1,16 +1,18 @@
-import React from "react";
-import { SectionId } from "../constants/data";
-import { RiListSettingsLine } from "react-icons/ri";
+import { BsGithub } from 'react-icons/bs';
+import {
+  FaLinkedinIn,
+  FaTelegramPlane,
+} from 'react-icons/fa';
+import { RiListSettingsLine } from 'react-icons/ri';
 
-import Button from "./atoms/Button";
-import { FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
-import { BsGithub } from "react-icons/bs";
+import { SectionId } from '../constants/data';
+import Button from './atoms/Button';
 
 export default function Navbar() {
   const childClassName = "transition-colors hover:text-gray-200";
   return (
     <nav className="flex justify-between py-4">
-      <a href="/" className="text-neon-500 font-bold">
+      <a href="/" className="text-blue-600 dark:text-neon-500 font-bold">
         @thanhhoa214
       </a>
       <ol className="hidden md:flex items-center gap-10 font-ubuntu">
@@ -26,7 +28,7 @@ export default function Navbar() {
         <li className="animated-border-bottom">
           <a href={"#" + SectionId.Contact}>04. Contact</a>
         </li>
-        <Button>Resume</Button>
+        <Button>Résume 📜</Button>
       </ol>
       <div className="flex md:hidden items-center gap-x-4">
         <a

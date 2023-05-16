@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
 import ReactTooltip from 'react-tooltip';
 
@@ -10,22 +11,28 @@ import { Project } from '../types/entities';
 export default function ProjectSection() {
   return (
     <section id={SectionId.Projects} className="mx-auto max-w-5xl">
-      <header className="flex items-center gap-3 mb-20 max-w-2xl">
-        <div className="w-20 h-0.5 bg-gray-600"></div>
-        <a href={"#" + SectionId.Projects} className="animated-border-bottom">
-          <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
-            03.
-          </strong>
-          <strong className="text-4xl text-gray-100">Things I've Built</strong>
-        </a>
-        <div className="flex-grow h-0.5 bg-gray-600"></div>
-      </header>
+      <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
+        <header className="flex items-center gap-3 mb-20 max-w-2xl">
+          <div className="w-20 h-0.5 bg-gray-600"></div>
+          <a href={"#" + SectionId.Projects} className="animated-border-bottom">
+            <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
+              03.
+            </strong>
+            <strong className="text-4xl text-gray-100">
+              Things I've Built
+            </strong>
+          </a>
+          <div className="flex-grow h-0.5 bg-gray-600"></div>
+        </header>
+      </AnimationOnScroll>
+
       <main>
         <ol>
           {projects.map((project, index) => (
             <ProjectItem
               project={project}
               isLeft={index % 2 === 1}
+              key={project.name}
             ></ProjectItem>
           ))}
         </ol>
@@ -78,7 +85,10 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
         isLeft ? "flex flex-row-reverse left" : "right"
       }`}
     >
-      <figure className="inline-block w-2/3 h-96 bg-navy-900">
+      <AnimationOnScroll
+        animateIn={isLeft ? "animate__fadeInRight" : "animate__fadeInLeft"}
+        className="inline-block w-2/3 h-96 bg-navy-900"
+      >
         <ImageGallery
           items={project.thumbnails.map((t) => ({
             originalTitle: t.title,
@@ -89,40 +99,45 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           }))}
           showBullets={true}
         ></ImageGallery>
-      </figure>
+      </AnimationOnScroll>
+
       <section
         className={`absolute top-0 t-8 w-2/5 py-4 -ml-56 ${
           isLeft ? "right-[60%]" : "right-0 text-right"
         }`}
       >
-        <p className="font-ubuntu text-gray-500">{project.type}</p>
-        <h3 className="text-2xl text-neon-600 font-bold mb-6">
-          {project.name}
-        </h3>
-        <p
-          className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify "
-          dangerouslySetInnerHTML={{ __html: project.description }}
-        ></p>
-        <ol
-          className={`flex flex-wrap w-5/6 gap-4 text-white ${
-            isLeft ? "ml-0 mr-auto" : "ml-auto mr-0 justify-end"
-          }`}
+        <AnimationOnScroll
+          animateIn={isLeft ? "animate__fadeInLeft" : "animate__fadeInRight"}
         >
-          <ReactTooltip place="top" type="light" effect="float" />
-          {project.technologies.map((tech) => (
-            <li className="inline-block">
-              <a
-                href={tech.url}
-                target="_blank"
-                data-tip={tech.description}
-                rel="noreferrer"
-                className="rounded py-1 px-2 link"
-              >
-                {tech.title}
-              </a>
-            </li>
-          ))}
-        </ol>
+          <p className="font-ubuntu text-gray-500">{project.type}</p>
+          <h3 className="text-2xl text-neon-600 font-bold mb-6">
+            {project.name}
+          </h3>
+          <p
+            className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify "
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          ></p>
+          <ol
+            className={`flex flex-wrap w-5/6 gap-4 text-white ${
+              isLeft ? "ml-0 mr-auto" : "ml-auto mr-0 justify-end"
+            }`}
+          >
+            <ReactTooltip place="top" type="light" effect="float" />
+            {project.technologies.map((tech) => (
+              <li className="inline-block" key={tech.url}>
+                <a
+                  href={tech.url}
+                  target="_blank"
+                  data-tip={tech.description}
+                  rel="noreferrer"
+                  className="rounded py-1 px-2 link"
+                >
+                  {tech.title}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </AnimationOnScroll>
       </section>
     </li>
   );
