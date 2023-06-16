@@ -13,7 +13,7 @@
 @import "src/styles/scrollbar.scss";
 
 body {
-  @apply bg-solarized-600 text-gray-700 dark:bg-navy-500 dark:text-gray-400 transition-colors;
+  @apply bg-navy-500 text-gray-400 transition-colors;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -28,7 +28,7 @@ code {
 }
 
 ::selection {
-  @apply bg-blue-600 dark:bg-neon-600 bg-opacity-20 text-gray-100;
+  @apply bg-neon-600 bg-opacity-20 text-gray-100;
 }
 
 * {
@@ -37,18 +37,18 @@ code {
 
 /* Utils */
 .animated-border-bottom {
-  @apply hover:text-blue-600 dark:hover:text-neon-500;
+  @apply hover:text-neon-500;
 
   &::after {
     content: "";
-    @apply block w-0 h-0.5 bg-blue-600 dark:bg-neon-600 transition-all;
+    @apply block w-0 h-0.5 bg-neon-600 transition-all;
   }
   &:hover::after {
     @apply w-full;
   }
 
   * {
-    @apply hover:text-blue-600 dark:hover:text-neon-500;
+    @apply hover:text-neon-500;
   }
 }
 
@@ -93,16 +93,12 @@ code {
   @include magic-border(2px, rgb(60, 215, 178), 0.15s, 0);
 
   &:hover {
-    @apply text-blue-600 dark:text-neon-600;
+    @apply text-neon-600;
   }
 }
 
 .btn {
-  @apply border border-solid rounded transition-colors font-ubuntu
-  hover:shadow-md hover:font-semibold
-  border-blue-400 text-blue-500 hover:bg-blue-200
-  dark:border-neon-400 dark:text-neon-500 dark:hover:bg-neon-200;
-  @apply hover:bg-opacity-30 #{!important};
+  @apply border border-solid border-neon-400 rounded text-neon-500 hover:bg-opacity-30 hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu;
 
   &.xl {
     @apply py-4 px-16 text-2xl;
@@ -114,12 +110,12 @@ ul > li {
   @apply relative pl-5 leading-relaxed;
   &::before {
     content: "▹";
-    @apply absolute left-0 top-1.5 text-blue-500 dark:text-neon-600 leading-3;
+    @apply absolute left-0 top-1.5 text-neon-600 leading-3;
   }
 }
 
 h3 {
-  @apply text-lg font-semibold  text-gray-700 dark:text-gray-200;
+  @apply text-lg font-semibold text-gray-200;
 }
 
 #projects {
@@ -130,7 +126,7 @@ h3 {
 #about figure {
   &::after {
     content: "";
-    @apply block w-60 h-60 border-4 border-solid border-blue-600 dark:border-neon-600 rounded absolute top-16 left-20 transition-transform;
+    @apply block w-60 h-60 border-4 border-solid border-neon-600 rounded absolute top-16 left-20 transition-transform;
   }
 
   &:hover {
@@ -149,13 +145,9 @@ h3 {
   ol li {
     @apply w-full h-16 py-4 px-6 rounded-r-md cursor-pointer border-l-4 border-solid border-gray-800 transition-colors;
 
-    &:hover,
-    &.active {
-      @apply bg-gray-700 bg-opacity-20 text-blue-600 dark:text-neon-500;
-    }
-
-    &.active {
-      @apply bg-gray-600;
+    &.active,
+    &:hover {
+      @apply bg-gray-600 bg-opacity-20 text-neon-500;
     }
   }
 
