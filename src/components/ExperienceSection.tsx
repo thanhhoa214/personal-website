@@ -33,7 +33,7 @@ export default function ExperienceSection() {
       </AnimationOnScroll>
 
       <main>
-        <ol className="flex md:inline-block relative align-top font-ubuntu">
+        <ol className="flex gap-4 md:gap-0 md:inline-block relative align-top font-ubuntu">
           <div
             className="h-16 w-1 bg-neon-600 rounded-full absolute transition-transform hidden md:block"
             style={{ transform: `translateY(${(company.id - 1) * 4}rem)` }}
@@ -44,11 +44,11 @@ export default function ExperienceSection() {
               className={c.id === company.id ? "active" : ""}
               onClick={() => setCompany(c)}
             >
-              <span className="inline-block h-10 w-10 p-1 -mt-0.5 rounded-md bg-white mr-2">
+              <span className="inline-block h-6 w-6 md:h-10 md:w-10 p-1 -mt-2 md:-mt-0.5 rounded-md bg-white mr-2">
                 <img
                   src={c.thumbnailUrl}
                   alt={`${c.name} logo`}
-                  className="h-8 max-w-full object-contain"
+                  className="h-4 md:h-8 max-w-full object-contain"
                 />
               </span>
               <span className="inline-block align-top text-xl pt-0.5 pl-1">

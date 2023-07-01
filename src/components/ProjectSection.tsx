@@ -1,12 +1,9 @@
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-import ImageGallery, { ReactImageGalleryItem } from 'react-image-gallery';
-import ReactTooltip from 'react-tooltip';
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+import ReactTooltip from "react-tooltip";
 
-import {
-  projects,
-  SectionId,
-} from '../constants/data';
-import { Project } from '../types/entities';
+import { projects, SectionId } from "../constants/data";
+import { Project } from "../types/entities";
 
 export default function ProjectSection() {
   return (
@@ -82,12 +79,12 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
   return (
     <li
       className={`relative mb-20 ${
-        isLeft ? "flex flex-row-reverse left" : "right"
+        isLeft ? "flex flex-col md:flex-row-reverse left" : "right"
       }`}
     >
       <AnimationOnScroll
         animateIn={isLeft ? "animate__fadeInRight" : "animate__fadeInLeft"}
-        className="inline-block w-2/3 h-96 bg-navy-900"
+        className="inline-block w-full md:w-2/3 h-96 bg-navy-900"
       >
         <ImageGallery
           items={project.thumbnails.map((t) => ({
@@ -102,8 +99,8 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
       </AnimationOnScroll>
 
       <section
-        className={`absolute top-0 t-8 w-2/5 py-4 -ml-56 ${
-          isLeft ? "right-[60%]" : "right-0 text-right"
+        className={`w-full md:absolute md:top-0 mt-8 md:w-2/5 md:py-4 md:-ml-56 ${
+          isLeft ? "md:right-[60%]" : "md:right-0 md:text-right"
         }`}
       >
         <AnimationOnScroll
@@ -119,7 +116,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           ></p>
           <ol
             className={`flex flex-wrap w-5/6 gap-4 text-white ${
-              isLeft ? "ml-0 mr-auto" : "ml-auto mr-0 justify-end"
+              isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0 justify-end"
             }`}
           >
             <ReactTooltip place="top" type="light" effect="float" />
