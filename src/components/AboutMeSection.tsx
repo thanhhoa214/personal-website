@@ -51,12 +51,15 @@ export default function AboutMeSection() {
             animateIn="animate__fadeInLeft"
             delay={3 * DELAY_BETWEEN}
           >
-            Fast-forward to today, and I've had the privilege of working at an
-            AI-based product company, a start-up with brilliant colleagues, with
-            vision reducing the barriers and bringing AI accessible for
-            everyone. My main focus these days is building accessible features,
-            contributed UI/UX feedbacks and improving our most-proud AI&amp;A
-            engine.
+            Throughout my career, I have been fortunate to work in dynamic
+            environments, including AI-based product companies and crypto firms.
+            These start-ups, filled with exceptional colleagues, shared a common
+            vision of breaking down barriers and making AI and revolutionary
+            financial services accessible to all. Currently, my main focus
+            revolves around developing user-friendly features, providing crypto
+            financial services, offering valuable UI/UX feedback, and
+            maintaining an extensive design system consisting of over 40
+            widely-used components across various projects.
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="mt-8 flex flex-wrap">
               <li className="w-1/2">

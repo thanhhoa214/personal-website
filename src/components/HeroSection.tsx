@@ -49,25 +49,17 @@ export default function HeroSection() {
       >
         <p className="max-w-lg mb-12">
           I'm a front-end guy specializing in building exceptional digital
-          experiences. Currently, I'm focused on building
+          experiences. Currently, I'm passionate about building crypto services
+          at{" "}
           <a
-            href="https://www.pi.exchange/the-ai-and-analytics-engine"
+            href="https://www.coinhako.com/"
             target="_blank"
             rel="noreferrer"
             className="inline-block animated-border-bottom"
           >
-            The AI & Analytics Engine
+            Coinhako
           </a>{" "}
-          - an accessible AI product at{" "}
-          <a
-            href="https://pi.exchange"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block animated-border-bottom"
-          >
-            pi.exchange
-          </a>
-          .
+          - the best crypto exchange to buy cryptocurrency in Singapore.
         </p>
       </AnimationOnScroll>
 
