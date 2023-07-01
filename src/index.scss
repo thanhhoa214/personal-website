@@ -143,7 +143,7 @@ h3 {
 /* Experience */
 #experience {
   ol li {
-    @apply w-full h-16 py-4 px-6 rounded-r-md cursor-pointer border-l-4 border-solid border-gray-800 transition-colors;
+    @apply flex;
 
     &.active,
     &:hover {
@@ -152,6 +152,16 @@ h3 {
   }
 
   section {
-    width: calc(100% - 24rem);
+    @apply w-full;
+  }
+
+  @screen md {
+    ol li {
+      @apply block w-full h-16 py-4 px-6 rounded-r-md cursor-pointer border-l-4 border-solid border-gray-800 transition-colors;
+    }
+
+    section {
+      width: calc(100% - 24rem);
+    }
   }
 }

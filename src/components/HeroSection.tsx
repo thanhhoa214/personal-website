@@ -7,7 +7,7 @@ import BounceSeeMore from "./atoms/BounceSeeMore";
 export default function HeroSection() {
   return (
     <section className="py-16 px-4 md:px-12 h-main relative">
-      <p className="font-ubuntu text-sm md:text-xl text-blue-600 dark:text-neon-500">
+      <p className="font-ubuntu text-sm md:text-xl text-neon-500">
         <AnimationOnScroll
           animateIn="animate__wobble"
           className="inline-block w-20 text-4xl leading-4"
@@ -20,7 +20,7 @@ export default function HeroSection() {
         </AnimationOnScroll>
       </p>
       <AnimationOnScroll animateIn="animate__fadeInLeft">
-        <div className="border-b border-blue-600 dark:border-neon-500 border-solid w-24 mb-6"></div>
+        <div className="border-b border-neon-500 border-solid w-24 mb-6"></div>
       </AnimationOnScroll>
 
       <h1 className="text-2xl md:text-6xl font-bold mb-6 leading-tight">
@@ -28,7 +28,7 @@ export default function HeroSection() {
           animateIn="animate__fadeInLeft"
           delay={DELAY_BETWEEN}
         >
-          <strong className="inline-block text-gray-900 dark:text-gray-100 relative font-extrabold">
+          <strong className="inline-block text-gray-100 relative font-extrabold">
             Hoà Nguyễn (Rin)
           </strong>
         </AnimationOnScroll>
@@ -79,7 +79,7 @@ export default function HeroSection() {
           href="https://docs.google.com/document/d/1p0LWEBbHzk0NfHcxf6xTAgegpLcxqVHJaQv5MqMFqpE"
           target="_blank"
           rel="noreferrer"
-          className="border border-solid border-blue-400 dark:border-neon-400 rounded text-blue-400 dark:text-neon-500 hover:!bg-opacity-30 hover:bg-blue-200 dark:hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu py-3 px-4 text-xl"
+          className="border border-solid border-neon-400 rounded text-neon-500 hover:!bg-opacity-30 hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu py-3 px-4 text-xl"
         >
           Check out my résume 📜
         </a>

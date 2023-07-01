@@ -1,8 +1,8 @@
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
-import { DELAY_BETWEEN } from '../constants/animation';
-import { SectionId } from '../constants/data';
-import BounceSeeMore from './atoms/BounceSeeMore';
+import { DELAY_BETWEEN } from "../constants/animation";
+import { SectionId } from "../constants/data";
+import BounceSeeMore from "./atoms/BounceSeeMore";
 
 export default function AboutMeSection() {
   return (
@@ -14,14 +14,12 @@ export default function AboutMeSection() {
         <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
           <header className="flex items-center gap-3 mb-10">
             <a href={"#" + SectionId.About} className="animated-border-bottom">
-              <strong className="font-ubuntu text-3xl text-blue-600 dark:text-neon-500 mr-2">
+              <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
                 01.
               </strong>
-              <strong className="text-4xl text-gray-900 dark:text-gray-100">
-                About Me
-              </strong>
+              <strong className="text-4xl text-gray-100">About Me</strong>
             </a>
-            <div className="flex-grow h-0.5 bg-gray-800 dark:bg-gray-600"></div>
+            <div className="flex-grow h-0.5 bg-gray-600"></div>
           </header>
         </AnimationOnScroll>
         <p className="mb-4">
@@ -40,7 +38,7 @@ export default function AboutMeSection() {
             animateIn="animate__fadeInLeft"
             delay={2 * DELAY_BETWEEN}
           >
-            <q className="block text-gray-900 dark:text-gray-100 font-semibold">
+            <q className="block text-gray-100 font-semibold">
               Coming together is a beginning, staying together is progress, and
               working together is success
             </q>
@@ -61,7 +59,9 @@ export default function AboutMeSection() {
             engine.
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="mt-8 flex flex-wrap">
-              <li className="w-1/2">Angular (RxJS, NGXS, RxState)</li>
+              <li className="w-1/2">
+                Angular 11 to 16 (Signal, RxJS, NGXS, RxState)
+              </li>
               <li className="w-1/2">Angular Material, ng-zorro-antd</li>
               <li className="w-1/2">Bootstrap, TailwindCSS</li>
               <li className="w-1/2">JavaScript (ES6+)</li>

@@ -1,13 +1,10 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
-import { DELAY_BETWEEN } from '../constants/animation';
-import {
-  companies,
-  SectionId,
-} from '../constants/data';
-import BounceSeeMore from './atoms/BounceSeeMore';
+import { DELAY_BETWEEN } from "../constants/animation";
+import { companies, SectionId } from "../constants/data";
+import BounceSeeMore from "./atoms/BounceSeeMore";
 
 export default function ExperienceSection() {
   const [company, setCompany] = useState(companies[0]);
@@ -15,7 +12,7 @@ export default function ExperienceSection() {
   return (
     <section
       id={SectionId.Experience}
-      className="min-h-screen relative max-w-5xl py-10"
+      className="min-h-screen relative max-w-5xl py-10 overflow-x-hidden"
     >
       <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
         <header className="flex items-center gap-3 mb-10 max-w-2xl">
@@ -24,51 +21,44 @@ export default function ExperienceSection() {
             href={"#" + SectionId.Experience}
             className="animated-border-bottom"
           >
-            <strong className="font-ubuntu text-3xl text-blue-600 dark:text-neon-500 mr-2">
+            <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
               02.
             </strong>
-            <strong className="text-4xl text-gray-900 dark:text-gray-100">
+            <strong className="text-4xl text-gray-100">
               Where I've Worked
             </strong>
           </a>
-          <div className="flex-grow h-0.5 bg-gray-800 dark:bg-gray-600"></div>
+          <div className="flex-grow h-0.5 bg-gray-600"></div>
         </header>
       </AnimationOnScroll>
 
       <main>
-        <ol className="inline-block relative align-top font-ubuntu">
-          <AnimationOnScroll
-            animateIn="animate__fadeInLeft"
-            delay={DELAY_BETWEEN}
-          >
-            <div
-              className="h-16 w-1 bg-neon-600 rounded-full absolute transition-transform"
-              style={{
-                transform: `translateY(${(company.id - 1) * 4}rem)`,
-              }}
-            ></div>
-            {companies.map((c) => (
-              <li
-                key={c.name}
-                className={c.id === company.id ? "active" : ""}
-                onClick={() => setCompany(c)}
-              >
-                <span className="inline-block h-10 w-10 p-1 -mt-0.5 rounded-md bg-white mr-2">
-                  <img
-                    src={c.thumbnailUrl}
-                    alt={`${c.name} logo`}
-                    className="h-8 max-w-full object-contain"
-                  />
-                </span>
-                <span className="inline-block align-top text-xl pt-0.5 pl-1">
-                  {c.name}
-                </span>
-              </li>
-            ))}
-          </AnimationOnScroll>
+        <ol className="flex md:inline-block relative align-top font-ubuntu">
+          <div
+            className="h-16 w-1 bg-neon-600 rounded-full absolute transition-transform hidden md:block"
+            style={{ transform: `translateY(${(company.id - 1) * 4}rem)` }}
+          ></div>
+          {companies.map((c) => (
+            <li
+              key={c.name}
+              className={c.id === company.id ? "active" : ""}
+              onClick={() => setCompany(c)}
+            >
+              <span className="inline-block h-10 w-10 p-1 -mt-0.5 rounded-md bg-white mr-2">
+                <img
+                  src={c.thumbnailUrl}
+                  alt={`${c.name} logo`}
+                  className="h-8 max-w-full object-contain"
+                />
+              </span>
+              <span className="inline-block align-top text-xl pt-0.5 pl-1">
+                {c.name}
+              </span>
+            </li>
+          ))}
         </ol>
 
-        <section className="inline-block py-2 px-4 ml-6">
+        <section className="inline-block py-2 md:px-4 md:ml-6 w-full">
           <AnimationOnScroll
             animateIn="animate__fadeInRight"
             delay={DELAY_BETWEEN}
@@ -100,7 +90,7 @@ export default function ExperienceSection() {
               <img
                 src={company.teamThumbnailUrl}
                 alt=""
-                className="h-80 w-auto rounded-lg"
+                className="h-80 w-auto rounded-lg object-cover"
               />
             </figure>
           </AnimationOnScroll>
