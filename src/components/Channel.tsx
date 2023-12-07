@@ -42,11 +42,11 @@ export default function Channel() {
       </div>
       <div className="fixed top-0 -right-20 flex flex-col-reverse items-center gap-4 text-gray-600">
         <a
-          href="mailto:thanhthanhhoa123@gmail.com"
+          href="mailto:hoanguyen.rin@gmail.com"
           className="rotate-90 mt-24 transition-colors hover:text-gray-200"
           title="Email me"
         >
-          thanhthanhhoa123@gmail.com
+          hoanguyen.rin@gmail.com
         </a>
         <div className="w-[1px] h-20 bg-gray-600"></div>
       </div>

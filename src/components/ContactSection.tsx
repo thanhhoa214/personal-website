@@ -26,7 +26,7 @@ export default function ContactSection({ className }: { className: string }) {
       </p>
 
       <AnimationOnScroll animateIn="animate__wobble">
-        <a href="mailto:thanhthanhhoa123@gmail.com" className="btn xl">
+        <a href="mailto:hoanguyen.rin@gmail.com" className="btn xl">
           Say Hello 🎁
         </a>
       </AnimationOnScroll>
