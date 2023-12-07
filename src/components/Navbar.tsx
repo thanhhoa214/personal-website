@@ -25,7 +25,9 @@ export default function Navbar() {
         <li className="animated-border-bottom">
           <a href={"#" + SectionId.Contact}>04. Contact</a>
         </li>
-        <Button>Résume 📜</Button>
+        <a href="https://docs.google.com/document/d/1qD2p9DSOKE4IHRY0ZO_vn9X5Nwgf0yXUNlkmg7HZQpE/edit?usp=sharing">
+          <Button>Résume 📜</Button>
+        </a>
       </ol>
       <div className="flex md:hidden items-center gap-x-4">
         <a

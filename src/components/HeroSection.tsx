@@ -68,7 +68,7 @@ export default function HeroSection() {
         delay={4 * DELAY_BETWEEN}
       >
         <a
-          href="https://docs.google.com/document/d/1p0LWEBbHzk0NfHcxf6xTAgegpLcxqVHJaQv5MqMFqpE"
+          href="https://docs.google.com/document/d/1qD2p9DSOKE4IHRY0ZO_vn9X5Nwgf0yXUNlkmg7HZQpE"
           target="_blank"
           rel="noreferrer"
           className="border border-solid border-neon-400 rounded text-neon-500 hover:!bg-opacity-30 hover:bg-neon-200 hover:shadow-md hover:font-semibold transition-colors font-ubuntu py-3 px-4 text-xl"
