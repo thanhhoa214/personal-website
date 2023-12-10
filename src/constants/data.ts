@@ -28,7 +28,7 @@ export const companies: Company[] = [
     url: "https://www.coinhako.com/",
     thumbnailUrl: "/images/companies/coinhako.ico",
     teamThumbnailUrl: "/images/companies/coinhako-team.jpg",
-    title: "Senior Front-end Developer",
+    title: "Senior Front-end Engineer",
     from: "Sep 2021",
     to: "Jul 2023",
     responsibilities: [
@@ -53,7 +53,7 @@ export const companies: Company[] = [
     url: "http://pi.exchange",
     thumbnailUrl: "/images/companies/pi.webp",
     teamThumbnailUrl: "/images/companies/pi-team.jpeg",
-    title: "Front-end Developer",
+    title: "Front-end Engineer",
     from: "Sep 2021",
     to: "Present",
     responsibilities: [
@@ -66,11 +66,11 @@ export const companies: Company[] = [
   },
   {
     id: 4,
-    name: "NNG Company Ltd.",
+    name: "NNG Ltd.",
     url: "http://nng.bz",
     thumbnailUrl: "/images/companies/nng.png",
     teamThumbnailUrl: "/images/companies/nng-team.jpg",
-    title: "Front-end Developer",
+    title: "Software Engineer",
     from: "Mar 2020",
     to: "Sep 2021",
     responsibilities: [

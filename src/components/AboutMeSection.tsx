@@ -10,14 +10,16 @@ export default function AboutMeSection() {
       id={SectionId.About}
       className="min-h-screen ml-auto flex flex-wrap md:flex-nowrap items-start relative max-w-5xl py-24"
     >
-      <article>
+      <article className="w-full text-justify">
         <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
           <header className="flex items-center gap-3 mb-10">
             <a href={"#" + SectionId.About} className="animated-border-bottom">
               <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
                 01.
               </strong>
-              <strong className="text-4xl text-gray-100">About Me</strong>
+              <strong className="text-2xl md:text-4xl text-gray-100">
+                About Me
+              </strong>
             </a>
             <div className="flex-grow h-0.5 bg-gray-600"></div>
           </header>
@@ -41,7 +43,7 @@ export default function AboutMeSection() {
             love quote
           </AnimationOnScroll>
         </p>
-        <p className="block w-96 mx-auto mb-4 text-center">
+        <p className="block w-72 md:w-96 mx-auto mb-4 text-center">
           <AnimationOnScroll
             animateIn="animate__fadeInLeft"
             delay={2 * DELAY_BETWEEN}

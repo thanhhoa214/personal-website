@@ -1,6 +1,5 @@
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
-import ReactTooltip from "react-tooltip";
 
 import { projects, SectionId } from "../constants/data";
 import { Project } from "../types/entities";
@@ -10,12 +9,12 @@ export default function ProjectSection() {
     <section id={SectionId.Projects} className="mx-auto max-w-5xl">
       <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
         <header className="flex items-center gap-3 mb-20 max-w-2xl">
-          <div className="w-20 h-0.5 bg-gray-600"></div>
+          <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
           <a href={"#" + SectionId.Projects} className="animated-border-bottom">
             <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
               03.
             </strong>
-            <strong className="text-4xl text-gray-100">
+            <strong className="text-2xl md:text-4xl text-gray-100">
               Things I've Built
             </strong>
           </a>
@@ -115,7 +114,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
             dangerouslySetInnerHTML={{ __html: project.description }}
           ></p>
           <ol
-            className={`flex flex-wrap w-5/6 gap-4 text-white ${
+            className={`flex flex-wrap md:w-5/6 gap-4 text-white ${
               isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0 justify-end"
             }`}
           >

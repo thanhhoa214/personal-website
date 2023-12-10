@@ -16,7 +16,7 @@ export default function ExperienceSection() {
     >
       <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
         <header className="flex items-center gap-3 mb-10 max-w-2xl">
-          <div className="w-20 h-0.5 bg-gray-600"></div>
+          <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
           <a
             href={"#" + SectionId.Experience}
             className="animated-border-bottom"
@@ -24,7 +24,7 @@ export default function ExperienceSection() {
             <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
               02.
             </strong>
-            <strong className="text-4xl text-gray-100">
+            <strong className="text-2xl md:text-4xl text-gray-100">
               Where I've Worked
             </strong>
           </a>
@@ -33,7 +33,7 @@ export default function ExperienceSection() {
       </AnimationOnScroll>
 
       <main>
-        <ol className="flex gap-4 md:gap-0 md:inline-block relative align-top font-ubuntu">
+        <ol className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-0 md:inline-block mb-4 md:mb-0 relative align-top font-ubuntu">
           <div
             className="h-16 w-1 bg-neon-600 rounded-full absolute transition-transform hidden md:block"
             style={{ transform: `translateY(${(company.id - 1) * 4}rem)` }}
