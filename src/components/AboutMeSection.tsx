@@ -27,10 +27,18 @@ export default function AboutMeSection() {
             animateIn="animate__fadeInLeft"
             delay={DELAY_BETWEEN}
           >
-            My name is Hoa Nguyen (Rin) - a problem solver with a demonstrated
-            history of working in the information technology and services
-            industry. Love keeping my brain up to date with the latest front-end
-            technologies. My love quote
+            My colleagues call me "Rin" - a tech savvy with a demonstrated
+            history of working in the tech, pursuing Master of Data Science
+            degree at{" "}
+            <a
+              href="https://swinburne.edu.au/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Swinburne University of Technology.
+            </a>{" "}
+            Love keeping my brain up to date with the latest technologies. My
+            love quote
           </AnimationOnScroll>
         </p>
         <p className="block w-96 mx-auto mb-4 text-center">
@@ -62,11 +70,11 @@ export default function AboutMeSection() {
             widely-used components across various projects.
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="mt-8 flex flex-wrap">
-              <li className="w-1/2">
-                Angular 11 to 16 (Signal, RxJS, NGXS, RxState)
-              </li>
-              <li className="w-1/2">Angular Material, ng-zorro-antd</li>
-              <li className="w-1/2">Bootstrap, TailwindCSS</li>
+              <li className="w-1/2">NextJS</li>
+              <li className="w-1/2">NestJS, Prisma</li>
+              <li className="w-1/2">PostgreSQL, Supabase, Firebase</li>
+              <li className="w-1/2">Angular (Signal, RxJS, RxState)</li>
+              <li className="w-1/2">TailwindCSS</li>
               <li className="w-1/2">JavaScript (ES6+)</li>
             </ul>
           </AnimationOnScroll>

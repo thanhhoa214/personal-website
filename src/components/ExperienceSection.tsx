@@ -82,7 +82,7 @@ export default function ExperienceSection() {
             </p>
             <ul>
               {company.responsibilities.map((r) => (
-                <li key={r}>{r}</li>
+                <li key={r} dangerouslySetInnerHTML={{ __html: r }}></li>
               ))}
             </ul>
 

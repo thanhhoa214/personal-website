@@ -16,11 +16,11 @@ export default function HeroSection() {
         </AnimationOnScroll>
         <br />
         <AnimationOnScroll animateIn="animate__fadeInLeft">
-          I'm a Front-end Developer
+          I'm a Full-stack Software Engineer
         </AnimationOnScroll>
       </p>
       <AnimationOnScroll animateIn="animate__fadeInLeft">
-        <div className="border-b border-neon-500 border-solid w-24 mb-6"></div>
+        <div className="border-b border-neon-500 border-solid w-52 md:w-72 mb-6 ml-10 md:ml-14"></div>
       </AnimationOnScroll>
 
       <h1 className="text-2xl md:text-6xl font-bold mb-6 leading-tight">
@@ -29,7 +29,7 @@ export default function HeroSection() {
           delay={DELAY_BETWEEN}
         >
           <strong className="inline-block text-gray-100 relative font-extrabold">
-            Hoà Nguyễn (Rin)
+            Hoa "Rin" Nguyen 🇻🇳
           </strong>
         </AnimationOnScroll>
 
@@ -48,18 +48,11 @@ export default function HeroSection() {
         delay={3 * DELAY_BETWEEN}
       >
         <p className="max-w-lg mb-12">
-          I'm a front-end guy specializing in building exceptional digital
-          experiences. Currently, I'm passionate about building crypto services
-          at{" "}
-          <a
-            href="https://www.coinhako.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block animated-border-bottom"
-          >
-            Coinhako
-          </a>{" "}
-          - the best crypto exchange to buy cryptocurrency in Singapore.
+          I'm a Melbourne-based developer with 4+ years of experience building
+          scalable web apps using Angular, NextJS, and TypeScript. Passionate
+          about crafting high-quality code and optimized user experiences.
+          Currently, I'm actively looking for challenging remote work on AI,
+          Blockchain, Finance sector especially early start-ups.
         </p>
       </AnimationOnScroll>
 

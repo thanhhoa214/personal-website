@@ -1,7 +1,4 @@
-import {
-  Company,
-  Project,
-} from '../types/entities';
+import { Company, Project } from "../types/entities";
 
 export const enum SectionId {
   About = "about",
@@ -13,6 +10,45 @@ export const enum SectionId {
 export const companies: Company[] = [
   {
     id: 1,
+    name: "EATLAB",
+    url: "https://eatlab.ai/",
+    thumbnailUrl: "/images/companies/eatlab.ico",
+    teamThumbnailUrl: "/images/companies/eatlab-team.jpeg",
+    title: "Full-stack Software Engineer",
+    from: "Jul 2023",
+    to: "Dec 2023",
+    responsibilities: [
+      "Led 2 members team on NestJS, Prisma, and NextJS with full-typed support from FE to BE via OpenAPI standards",
+      "Implemented an AI-integrated marketing product with Flutter and GetX",
+    ],
+  },
+  {
+    id: 2,
+    name: "Coinhako",
+    url: "https://www.coinhako.com/",
+    thumbnailUrl: "/images/companies/coinhako.ico",
+    teamThumbnailUrl: "/images/companies/coinhako-team.jpg",
+    title: "Senior Front-end Developer",
+    from: "Sep 2021",
+    to: "Jul 2023",
+    responsibilities: [
+      "Built and maintained a Design System with 38+ components with variants by Storybook and Angular library",
+      `Built open-sourced strict-typed JSON API Spec library by TypeScript advanced features (${getATag(
+        "Github",
+        "https://github.com/thanhhoa214/jsonapi-typescript"
+      )})`,
+      "Boosted 30% performance by OnPush CD and reduced initial bundled size",
+      "Migrated million-users app from SSR to SSG, from Angular 12 to 16 seamlessly",
+      `Hosted 1 internal seminar about Angular Architecture (${getATag(
+        "slide",
+        "https://www.slideshare.net/HaNguyn98/leverage-nx-library-thesis-in-angular-architecture"
+      )})`,
+      "Accelerated workflows to reduce 80% running time by caching building steps and E2E setup",
+      "Developed & contributed to the feature discussion for UI/UX in all developer-user-trader views      ",
+    ],
+  },
+  {
+    id: 3,
     name: "PI.EXCHANGE",
     url: "http://pi.exchange",
     thumbnailUrl: "/images/companies/pi.webp",
@@ -29,7 +65,7 @@ export const companies: Company[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "NNG Company Ltd.",
     url: "http://nng.bz",
     thumbnailUrl: "/images/companies/nng.png",
@@ -38,11 +74,30 @@ export const companies: Company[] = [
     from: "Mar 2020",
     to: "Sep 2021",
     responsibilities: [
-      "Built and deployed 4+ projects by using Angular and Ionic",
-      "Built mobile CI/CD system by utilizing GitlabCI, GitlabRunner, Fastlane",
-      "Host 4+ internal technical seminars (NGXS (2), RxJS, GraphQLCodegen)",
-      "Composed Front-end Coding Guidelines for entire company use",
-      "Led team with 3 members when working part-time",
+      "Built and deployed 4+ projects by using Angular, Ionic with RestfulAPI, GraphQL",
+      "Built mobile CI/CD pipeline pushing apps onto TestFlight and GoogleStore via GitlabCI, GitlabRunner, Fastlane ",
+      `Hosted 4+ internal technical seminars (${getATag(
+        "NGXS (2)",
+        "https://www.slideshare.net/HaNguyn98/nng-technical-seminar-ngxs"
+      )}, ${getATag(
+        "RxJS",
+        "https://www.slideshare.net/HaNguyn98/rxjs-nng-technical-seminar"
+      )}, ${getATag(
+        "GraphQLCodegen",
+        "https://www.slideshare.net/HaNguyn98/graphql-codegen-nng-technical-seminar"
+      )})`,
+      `Built and published open-sourced libraries (${getATag(
+        "Capacitor Downloader",
+        "https://www.npmjs.com/package/capacitor-plugin-downloader"
+      )}, ${getATag(
+        "Zalo Auth Capacitor",
+        "https://www.npmjs.com/package/zalo-auth-capacitor-plugin"
+      )})`,
+      "Composed Angular Front-end Coding Guidelines for the entire company use",
+      `Built ${getATag(
+        "Interior Design Mobile App",
+        "#" + SectionId.Projects
+      )} including but not limited to features Login with Facebook, Zalo natively, online payment through VNPay, deep link supported, CMS, post, and comment simulated Facebook UI/UX mechanism`,
     ],
   },
 ];
@@ -104,7 +159,7 @@ export const projects: Project[] = [
           "Quickly checkout through VNPay online payment and get your design right the time",
       },
       {
-        title: "Posts Surfing Screen",
+        title: "Posts Browsing Screen",
         url: "/images/projects/lifeon/post-list.png",
         description:
           "Check reviews and shares from design finders, get more insights before sign in the contract",
@@ -277,3 +332,9 @@ export const projects: Project[] = [
     ],
   },
 ];
+
+function getATag(title: string, href: string) {
+  return `<a href="${href}" ${
+    !href.startsWith("#") && "target='_blank'"
+  } rel="noreferrer" class="inline-block !text-neon-500 animated-border-bottom">${title}</a>`;
+}

@@ -99,7 +99,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
       </AnimationOnScroll>
 
       <section
-        className={`w-full md:absolute md:top-0 mt-8 md:w-2/5 md:py-4 md:-ml-56 ${
+        className={`w-full md:absolute md:pointer-events-none md:top-0 mt-8 md:w-2/5 md:py-4 md:-ml-56 ${
           isLeft ? "md:right-[60%]" : "md:right-0 md:text-right"
         }`}
       >
@@ -119,15 +119,14 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
               isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0 justify-end"
             }`}
           >
-            <ReactTooltip place="top" type="light" effect="float" />
             {project.technologies.map((tech) => (
               <li className="inline-block" key={tech.url}>
                 <a
                   href={tech.url}
                   target="_blank"
-                  data-tip={tech.description}
                   rel="noreferrer"
-                  className="rounded py-1 px-2 link"
+                  title={tech.description}
+                  className="rounded py-1 px-1 link pointer-events-auto"
                 >
                   {tech.title}
                 </a>
