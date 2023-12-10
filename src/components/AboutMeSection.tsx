@@ -71,7 +71,7 @@ export default function AboutMeSection() {
             maintaining an extensive design system consisting of over 40
             widely-used components across various projects.
             <p>Here are a few technologies I've been working with recently:</p>
-            <ul className="mt-8 flex flex-wrap">
+            <ul className="mt-8 flex flex-wrap text-left">
               <li className="w-1/2">NextJS</li>
               <li className="w-1/2">NestJS, Prisma</li>
               <li className="w-1/2">PostgreSQL, Supabase, Firebase</li>
