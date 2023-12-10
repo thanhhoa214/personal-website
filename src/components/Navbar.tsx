@@ -1,11 +1,5 @@
 import { BsGithub } from "react-icons/bs";
-import {
-  FaLinkedinIn,
-  FaTelegramPlane,
-  FaBars,
-  FaMixer,
-  FaDotCircle,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaTelegramPlane, FaBars, FaMixer } from "react-icons/fa";
 
 import { SectionId } from "../constants/data";
 import Button from "./atoms/Button";
