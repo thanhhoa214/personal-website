@@ -12,7 +12,7 @@ export default function ExperienceSection() {
   return (
     <section
       id={SectionId.Experience}
-      className="min-h-screen relative max-w-5xl py-10 overflow-x-hidden"
+      className="min-h-screen relative max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto py-10"
     >
       <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
         <header className="flex items-center gap-3 mb-10 max-w-2xl">

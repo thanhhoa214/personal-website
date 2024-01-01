@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Channel></Channel>
-      <main className="max-w-7xl w-full mx-auto px-4">
+      <main className="w-full mx-auto px-4 overflow-x-hidden">
         <Navbar></Navbar>
         <HeroSection></HeroSection>
         <AboutMeSection></AboutMeSection>

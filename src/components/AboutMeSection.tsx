@@ -8,7 +8,7 @@ export default function AboutMeSection() {
   return (
     <section
       id={SectionId.About}
-      className="min-h-screen ml-auto flex flex-wrap md:flex-nowrap items-start relative max-w-5xl py-24"
+      className="min-h-screen max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto flex flex-wrap md:flex-nowrap items-start relative py-24"
     >
       <article className="w-full text-justify">
         <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
@@ -85,13 +85,13 @@ export default function AboutMeSection() {
       <AnimationOnScroll
         animateIn="animate__fadeInRight"
         delay={DELAY_BETWEEN}
-        className="w-full md:w-1/3 flex-shrink-0"
+        className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0"
       >
         <figure className="w-full flex justify-center p-8 relative group">
           <img
             src="https://avatars.githubusercontent.com/u/32329202?v=4"
-            alt=""
-            className="w-60 h-60 rounded z-10 transition-transform"
+            alt="avatar"
+            className="w-60 h-60 rounded z-10 transition-transform flex-shrink-0"
           />
         </figure>
       </AnimationOnScroll>
