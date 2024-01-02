@@ -51,10 +51,12 @@ export default function ArtworkSection() {
     const { top, left, width, height } = imgElement.getBoundingClientRect();
 
     setSelectedImage({ url: imageUrl, top, left, width, height });
+    document.body.style.overflow = "hidden";
   };
 
   const closeModal = () => {
     setSelectedImage(null);
+    document.body.style.overflow = "visible";
   };
 
   return (
@@ -93,7 +95,8 @@ export default function ArtworkSection() {
               {images.map((url) => (
                 <div
                   key={url}
-                  className="rounded-md mx-auto my-2 overflow-hidden relative"
+                  className="rounded-md mx-auto my-2 overflow-hidden relative cursor-pointer"
+                  title="Click to expand"
                   style={{ width: "calc(100% - 1rem)" }}
                   onClick={(event) => openModal(url, event)}
                 >
@@ -129,6 +132,7 @@ export default function ArtworkSection() {
             animate={{ top: "2.5%", left: "2.5%", width: "95%", height: "95%" }}
             exit={selectedImage}
             className="fixed rounded-md mx-auto my-2 overflow-hidden z-50"
+            title="Click to collapse"
             onClick={() => closeModal()}
           >
             <img
