@@ -4,7 +4,7 @@ import BounceSeeMore from "./atoms/BounceSeeMore";
 
 export default function HeroSection() {
   return (
-    <section className="py-8 px-4 md:px-12 h-main relative">
+    <section className="py-8 px-4 md:px-12 xl:px-16 h-main relative">
       <p className="font-ubuntu text-sm md:text-xl text-neon-500">
         <AnimationOnScroll
           animateIn="animate__wobble"

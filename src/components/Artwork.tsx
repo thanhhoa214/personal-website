@@ -67,7 +67,7 @@ export default function ArtworkSection() {
         className="flex items-center gap-3 mb-8 max-w-2xl"
       >
         <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
-        <a href={"#" + SectionId.Projects} className="animated-border-bottom">
+        <a href={"#" + SectionId.Artwork} className="animated-border-bottom">
           <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
             04.
           </strong>
@@ -83,7 +83,7 @@ export default function ArtworkSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.45, duration: 0.45 }}
         viewport={{ once: true }}
-        className={`transition-all flex flex-col ${!showAll && "h-screen"}`}
+        className={`transition-all flex flex-col ${!showAll && "h-[85vh]"}`}
       >
         <div className={showAll ? "" : "overflow-scroll relative"}>
           <ResponsiveMasonry
