@@ -1,10 +1,7 @@
 import { useState } from "react";
-
-import { AnimationOnScroll } from "react-animation-on-scroll";
-
-import { DELAY_BETWEEN } from "../constants/animation";
 import { companies, SectionId } from "../constants/data";
 import BounceSeeMore from "./atoms/BounceSeeMore";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function ExperienceSection() {
   const [company, setCompany] = useState(companies[0]);
@@ -14,26 +11,33 @@ export default function ExperienceSection() {
       id={SectionId.Experience}
       className="min-h-screen relative max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto py-10"
     >
-      <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
-        <header className="flex items-center gap-3 mb-10 max-w-2xl">
-          <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
-          <a
-            href={"#" + SectionId.Experience}
-            className="animated-border-bottom"
-          >
-            <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
-              02.
-            </strong>
-            <strong className="text-2xl md:text-4xl text-gray-100">
-              Where I've Worked
-            </strong>
-          </a>
-          <div className="flex-grow h-0.5 bg-gray-600"></div>
-        </header>
-      </AnimationOnScroll>
+      <motion.header
+        initial={{ opacity: 0, y: -200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25, duration: 0.45 }}
+        viewport={{ once: true }}
+        className="flex items-center gap-3 mb-10 max-w-2xl"
+      >
+        <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
+        <a href={"#" + SectionId.Experience} className="animated-border-bottom">
+          <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
+            02.
+          </strong>
+          <strong className="text-2xl md:text-4xl text-gray-100">
+            Where I've Worked
+          </strong>
+        </a>
+        <div className="flex-grow h-0.5 bg-gray-600"></div>
+      </motion.header>
 
-      <main>
-        <ol className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-0 md:inline-block mb-4 md:mb-0 relative align-top font-ubuntu">
+      <motion.main
+        initial={{ opacity: 0, y: -200 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.45 }}
+        viewport={{ once: true }}
+        className="flex flex-col md:flex-row"
+      >
+        <ol className="grid grid-cols-2 grid-rows-2 gap-4 md:gap-0 md:inline-block mb-4 md:mb-0 relative align-top font-ubuntu shrink-0">
           <div
             className="h-16 w-1 bg-neon-600 rounded-full absolute transition-transform hidden md:block"
             style={{ transform: `translateY(${(company.id - 1) * 4}rem)` }}
@@ -57,11 +61,14 @@ export default function ExperienceSection() {
             </li>
           ))}
         </ol>
-
-        <section className="inline-block py-2 md:px-4 md:ml-6 w-full">
-          <AnimationOnScroll
-            animateIn="animate__fadeInRight"
-            delay={DELAY_BETWEEN}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={company ? company.name : "empty"}
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -10, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="inline-block py-2 md:px-4 md:ml-6 w-full"
           >
             <h3 className="space-x-2">
               <span className="text-gray-200">{company.title}</span>
@@ -93,9 +100,9 @@ export default function ExperienceSection() {
                 className="h-80 w-auto rounded-lg object-cover"
               />
             </figure>
-          </AnimationOnScroll>
-        </section>
-      </main>
+          </motion.div>
+        </AnimatePresence>
+      </motion.main>
 
       <div className="absolute top-44 -right-32 -z-10 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-40 bg-neon-500 bg-opacity-10 rounded-lg"></div>
       <div className="absolute top-96 left-16 -z-10 -rotate-12 w-20 h-20 border border-solid border-neon-700 border-opacity-40 bg-neon-500 bg-opacity-10 rounded-lg"></div>

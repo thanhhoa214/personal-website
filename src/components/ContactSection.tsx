@@ -1,6 +1,6 @@
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
-import { SectionId } from '../constants/data';
+import { SectionId } from "../constants/data";
 
 export default function ContactSection({ className }: { className: string }) {
   return (

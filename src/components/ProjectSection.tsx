@@ -1,8 +1,7 @@
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
-
 import { projects, SectionId } from "../constants/data";
 import { Project } from "../types/entities";
+import { motion } from "framer-motion";
 
 export default function ProjectSection() {
   return (
@@ -10,20 +9,24 @@ export default function ProjectSection() {
       id={SectionId.Projects}
       className="max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto"
     >
-      <AnimationOnScroll animateIn="animate__fadeInLeft" offset={100}>
-        <header className="flex items-center gap-3 mb-20 max-w-2xl">
-          <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
-          <a href={"#" + SectionId.Projects} className="animated-border-bottom">
-            <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
-              03.
-            </strong>
-            <strong className="text-2xl md:text-4xl text-gray-100">
-              Things I've Built
-            </strong>
-          </a>
-          <div className="flex-grow h-0.5 bg-gray-600"></div>
-        </header>
-      </AnimationOnScroll>
+      <motion.header
+        initial={{ opacity: 0, y: -150 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25, duration: 0.45 }}
+        viewport={{ once: true }}
+        className="flex items-center gap-3 mb-20 max-w-2xl"
+      >
+        <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
+        <a href={"#" + SectionId.Projects} className="animated-border-bottom">
+          <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
+            03.
+          </strong>
+          <strong className="text-2xl md:text-4xl text-gray-100">
+            Things I've Built
+          </strong>
+        </a>
+        <div className="flex-grow h-0.5 bg-gray-600"></div>
+      </motion.header>
 
       <main>
         <ol>
@@ -84,8 +87,11 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
         isLeft ? "flex flex-col md:flex-row-reverse left" : "right"
       }`}
     >
-      <AnimationOnScroll
-        animateIn={isLeft ? "animate__fadeInRight" : "animate__fadeInLeft"}
+      <motion.div
+        initial={{ opacity: 0, x: isLeft ? 150 : -150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.25, duration: 0.45 }}
+        viewport={{ once: true }}
         className="inline-block w-full md:w-2/3 h-96 bg-navy-900"
       >
         <ImageGallery
@@ -97,16 +103,19 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
             renderItem: renderImage,
           }))}
           showBullets={true}
-        ></ImageGallery>
-      </AnimationOnScroll>
+        />
+      </motion.div>
 
       <section
         className={`w-full md:absolute md:pointer-events-none md:top-0 mt-8 md:w-2/5 md:py-4 md:-ml-56 ${
           isLeft ? "md:right-[60%]" : "md:right-0 md:text-right"
         }`}
       >
-        <AnimationOnScroll
-          animateIn={isLeft ? "animate__fadeInLeft" : "animate__fadeInRight"}
+        <motion.div
+          initial={{ opacity: 0, x: isLeft ? -150 : 150 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.25, duration: 0.45 }}
+          viewport={{ once: true }}
         >
           <p className="font-ubuntu text-gray-500">{project.type}</p>
           <h3 className="text-2xl text-neon-600 font-bold mb-6">
@@ -135,7 +144,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
               </li>
             ))}
           </ol>
-        </AnimationOnScroll>
+        </motion.div>
       </section>
     </li>
   );

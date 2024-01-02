@@ -32,7 +32,10 @@ export default function Navbar() {
             <a href={"#" + SectionId.Projects}>03. Projects</a>
           </li>
           <li className="animated-border-bottom">
-            <a href={"#" + SectionId.Contact}>04. Contact</a>
+            <a href={"#" + SectionId.Artwork}>04. Artworks</a>
+          </li>
+          <li className="animated-border-bottom">
+            <a href={"#" + SectionId.Contact}>05. Contact</a>
           </li>
           <a href="https://docs.google.com/document/d/1qD2p9DSOKE4IHRY0ZO_vn9X5Nwgf0yXUNlkmg7HZQpE/edit?usp=sharing">
             <Button>Résume 📜</Button>

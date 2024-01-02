@@ -1,8 +1,8 @@
 import { SectionId } from "../constants/data";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import Modal from "react-modal";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const images = [
   "IMG_0012.jpg",
@@ -59,20 +59,32 @@ export default function ArtworkSection() {
 
   return (
     <section id={SectionId.Artwork} className="px-4 md:px-12 mx-auto">
-      <header className="flex items-center gap-3 mb-8 max-w-2xl">
+      <motion.header
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25, duration: 0.45 }}
+        viewport={{ once: true }}
+        className="flex items-center gap-3 mb-8 max-w-2xl"
+      >
         <div className="w-6 md:w-20 h-0.5 bg-gray-600"></div>
         <a href={"#" + SectionId.Projects} className="animated-border-bottom">
           <strong className="font-ubuntu text-3xl text-neon-500 mr-2">
             04.
           </strong>
           <strong className="text-2xl md:text-4xl text-gray-100">
-            My artworks
+            My Artworks
           </strong>
         </a>
         <div className="flex-grow h-0.5 bg-gray-600"></div>
-      </header>
+      </motion.header>
 
-      <div className={`transition-all flex flex-col ${!showAll && "h-screen"}`}>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.45, duration: 0.45 }}
+        viewport={{ once: true }}
+        className={`transition-all flex flex-col ${!showAll && "h-screen"}`}
+      >
         <div className={showAll ? "" : "overflow-scroll relative"}>
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3, 1600: 4 }}
@@ -92,21 +104,23 @@ export default function ArtworkSection() {
           </ResponsiveMasonry>
         </div>
         {!showAll && (
-          <div className="-mt-8 w-full h-8 shrink-0 z-40 bg-gradient-to-t from-navy-500 to-transparent"></div>
+          <div className="-mt-8 w-full h-8 shrink-0 z-40 bg-gradient-to-t from-navy-500 to-transparent" />
         )}
         <button
           onClick={() => setShowAll(!showAll)}
-          className="px-4 py-2 self-center"
+          className="px-4 py-2 self-center inline-flex flex-col items-center"
         >
-          Show {showAll ? "less" : "all"}
+          {showAll && <FaAngleUp />}
+          <span>{showAll ? "Collapse images" : "Expand images"}</span>
+          {!showAll && <FaAngleDown />}
         </button>
-      </div>
+      </motion.div>
 
       {selectedImage && (
         <div
-          className="z-40 fixed top-0 left-0 w-full h-screen bg-black bg-opacity-30"
+          className="z-40 fixed top-0 left-0 w-full h-screen bg-black bg-opacity-60"
           onClick={() => closeModal()}
-        ></div>
+        />
       )}
       <AnimatePresence mode="wait">
         {selectedImage && (
