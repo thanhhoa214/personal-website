@@ -17,11 +17,11 @@ export default function Navbar() {
   };
   return (
     <>
-      <nav className="flex justify-between py-4">
+      <nav className="flex justify-between py-4 px-4 md:px-12">
         <a href="/" className="text-neon-500 font-bold">
           @thanhhoa214
         </a>
-        <ol className="hidden md:flex items-center gap-10 font-ubuntu">
+        <ol className="hidden md:flex items-center gap-4 lg:gap-10 font-ubuntu">
           <li className="animated-border-bottom">
             <a href={"#" + SectionId.About}>01. About</a>
           </li>

@@ -5,6 +5,7 @@ export const enum SectionId {
   Experience = "experience",
   Projects = "projects",
   Contact = "contact",
+  Artwork = "artwork",
 }
 
 export const companies: Company[] = [

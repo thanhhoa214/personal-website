@@ -1,4 +1,5 @@
 import AboutMeSection from "./components/AboutMeSection";
+import ArtworkSection from "./components/Artwork";
 import Channel from "./components/Channel";
 import ContactSection from "./components/ContactSection";
 import ExperienceSection from "./components/ExperienceSection";
@@ -9,15 +10,16 @@ import ProjectSection from "./components/ProjectSection";
 function App() {
   return (
     <>
-      <Channel></Channel>
+      <Channel />
       <main className="w-full mx-auto px-4 overflow-x-hidden">
-        <Navbar></Navbar>
-        <HeroSection></HeroSection>
-        <AboutMeSection></AboutMeSection>
-        <ExperienceSection></ExperienceSection>
-        <ProjectSection></ProjectSection>
+        <Navbar />
+        <HeroSection />
+        <AboutMeSection />
+        <ExperienceSection />
+        <ProjectSection />
+        <ArtworkSection />
         <div className="min-h-screen flex flex-col">
-          <ContactSection className="py-12 flex-grow"></ContactSection>
+          <ContactSection className="py-12 flex-grow" />
           <footer className="py-4 text-center font-ubuntu text-sm">
             Designed &#38; inspired by{" "}
             <a

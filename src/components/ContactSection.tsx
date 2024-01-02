@@ -12,7 +12,7 @@ export default function ContactSection({ className }: { className: string }) {
         href={"#" + SectionId.Contact}
         className="font-ubuntu text-2xl text-neon-500 animated-border-bottom mr-2"
       >
-        04. What's next?
+        05. What's next?
       </a>
       <h2 className="text-4xl md:text-7xl text-gray-100 font-bold">
         Get In Touch
