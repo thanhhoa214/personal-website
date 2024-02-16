@@ -107,7 +107,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
       </motion.div>
 
       <section
-        className={`w-full md:absolute md:pointer-events-none md:top-0 mt-8 md:w-2/5 md:py-4 md:-ml-56 ${
+        className={`w-full md:absolute md:top-0 mt-8 md:w-2/5 md:py-4 md:-ml-56 ${
           isLeft ? "md:right-[60%]" : "md:right-0 md:text-right"
         }`}
       >
@@ -121,10 +121,9 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           <h3 className="text-2xl text-neon-600 font-bold mb-6">
             {project.name}
           </h3>
-          <p
-            className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify "
-            dangerouslySetInnerHTML={{ __html: project.description }}
-          ></p>
+          <p className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify ">
+            {project.description}
+          </p>
           <ol
             className={`flex flex-wrap md:w-5/6 gap-4 text-white ${
               isLeft ? "md:ml-0 md:mr-auto" : "md:ml-auto md:mr-0 justify-end"
@@ -136,7 +135,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
                   href={tech.url}
                   target="_blank"
                   rel="noreferrer"
-                  title={tech.description}
+                  title={tech.description + ""}
                   className="rounded py-1 px-1 link pointer-events-auto"
                 >
                   {tech.title}

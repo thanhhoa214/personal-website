@@ -20,7 +20,7 @@ export interface Project {
   company?: Company;
   type: string;
   name: string;
-  description: string;
+  description: React.ReactNode;
   thumbnails: DescriptiveImage[];
   technologies: DescriptiveImage[];
 }

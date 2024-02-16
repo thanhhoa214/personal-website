@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaAngleDown, FaAngleUp } from "react-icons/fa";
 
 const images = [
+  "IMG_5224.jpg",
   "IMG_0012.jpg",
-  "IMG_2076.png",
+  "IMG_2076.jpg",
   "IMG_2561.JPG",
   "IMG_0094.jpg",
   "sketch.jpg",
