@@ -56,7 +56,7 @@ export const companies: Company[] = [
     teamThumbnailUrl: "/images/companies/pi-team.jpeg",
     title: "Front-end Engineer",
     from: "Sep 2021",
-    to: "Present",
+    to: "May 2022",
     responsibilities: [
       "Implemented UI for Batch Prediction and What-If Prediction features",
       "Maintained and refactored codebase by discussing and pushing proposals",
