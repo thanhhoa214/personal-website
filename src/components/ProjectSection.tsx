@@ -63,7 +63,10 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           }`}
         >
           <strong>{item.originalTitle}</strong>
-          <p className="text-sm leading-4 mt-3 w-72">{item.originalAlt}</p>
+          <p
+            className="text-sm leading-4 mt-3 w-72"
+            dangerouslySetInnerHTML={{ __html: item.originalAlt || "" }}
+          ></p>
         </section>
         {item.original.endsWith("mp4") ? (
           <video controls className={`h-full object-contain ${mediaClass}`}>

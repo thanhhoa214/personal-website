@@ -45,7 +45,7 @@ export default function AboutMeSection() {
               Swinburne University of Technology.
             </a>{" "}
             Love keeping my brain up to date with the latest technologies. My
-            love quote
+            love quote is
           </p>
           <p className="block w-72 md:w-96 mx-auto mb-4 text-center">
             <q className="block text-gray-100 font-semibold">

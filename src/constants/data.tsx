@@ -13,8 +13,8 @@ export const companies: Company[] = [
     id: 1,
     name: "EATLAB",
     url: "https://eatlab.ai/",
-    thumbnailUrl: "/images/companies/eatlab.ico",
-    teamThumbnailUrl: "/images/companies/eatlab-team.jpeg",
+    thumbnailUrl: "./images/companies/eatlab.ico",
+    teamThumbnailUrl: "./images/companies/eatlab-team.jpeg",
     title: "Full-stack Software Engineer",
     from: "Jul 2023",
     to: "Dec 2023",
@@ -27,8 +27,8 @@ export const companies: Company[] = [
     id: 2,
     name: "Coinhako",
     url: "https://www.coinhako.com/",
-    thumbnailUrl: "/images/companies/coinhako.ico",
-    teamThumbnailUrl: "/images/companies/coinhako-team.jpg",
+    thumbnailUrl: "./images/companies/coinhako.ico",
+    teamThumbnailUrl: "./images/companies/coinhako-team.jpg",
     title: "Senior Front-end Engineer",
     from: "Sep 2021",
     to: "Jul 2023",
@@ -52,8 +52,8 @@ export const companies: Company[] = [
     id: 3,
     name: "PI.EXCHANGE",
     url: "http://pi.exchange",
-    thumbnailUrl: "/images/companies/pi.webp",
-    teamThumbnailUrl: "/images/companies/pi-team.jpeg",
+    thumbnailUrl: "./images/companies/pi.webp",
+    teamThumbnailUrl: "./images/companies/pi-team.jpeg",
     title: "Front-end Engineer",
     from: "Sep 2021",
     to: "May 2022",
@@ -69,8 +69,8 @@ export const companies: Company[] = [
     id: 4,
     name: "NNG Ltd.",
     url: "http://nng.bz",
-    thumbnailUrl: "/images/companies/nng.png",
-    teamThumbnailUrl: "/images/companies/nng-team.jpg",
+    thumbnailUrl: "./images/companies/nng.png",
+    teamThumbnailUrl: "./images/companies/nng-team.jpg",
     title: "Software Engineer",
     from: "Mar 2020",
     to: "Sep 2021",
@@ -114,66 +114,66 @@ export const projects: Project[] = [
     thumbnails: [
       {
         title: "User Flows",
-        url: "/images/projects/lifeon/record.mp4",
+        url: "./images/projects/lifeon/record.mp4",
         description: "Simple login with Zalo flow",
       },
       {
         title: "Login Screen",
-        url: "/images/projects/lifeon/login.png",
+        url: "./images/projects/lifeon/login.png",
         description:
           "JWT for authentication. Supported logging in with Facebook and Zalo natively in both Android and iOS devices",
       },
       {
         title: "Home Screen (1)",
-        url: "/images/projects/lifeon/home-1.png",
+        url: "./images/projects/lifeon/home-1.png",
         description:
           "Kick-off your dream house with simple steps. Pick a dream house design, contact your potential constructors directly and let's us take care the rest",
       },
       {
         title: "Home Screen (2)",
-        url: "/images/projects/lifeon/home-2.png",
+        url: "./images/projects/lifeon/home-2.png",
         description:
           "A marketplace application with multiple languages, multiple roles and numbers of awesome features to explore...",
       },
       {
         title: "Design Detail Screen (1)",
-        url: "/images/projects/lifeon/design-detail-1.png",
+        url: "./images/projects/lifeon/design-detail-1.png",
         description:
           "Like, bookmark, discuss with like-minded finders, put a review or share the design on various social channels",
       },
       {
         title: "Design Detail Screen (2)",
-        url: "/images/projects/lifeon/design-detail-2.png",
+        url: "./images/projects/lifeon/design-detail-2.png",
         description:
           "Connect with potential constructors to actualize your design right after 1 touch",
       },
       {
         title: "Cart Screen",
-        url: "/images/projects/lifeon/cart.png",
+        url: "./images/projects/lifeon/cart.png",
         description:
           "Put whatever you love into the cart, checkout mindlessly with only selected like Shopee",
       },
       {
         title: "Payment Screen",
-        url: "/images/projects/lifeon/payment.png",
+        url: "./images/projects/lifeon/payment.png",
         description:
           "Quickly checkout through VNPay online payment and get your design right the time",
       },
       {
         title: "Posts Browsing Screen",
-        url: "/images/projects/lifeon/post-list.png",
+        url: "./images/projects/lifeon/post-list.png",
         description:
           "Check reviews and shares from design finders, get more insights before sign in the contract",
       },
       {
         title: "Post Detail Screen",
-        url: "/images/projects/lifeon/post-detail.png",
+        url: "./images/projects/lifeon/post-detail.png",
         description:
           "Mimic the Facebook comment mechanism, reply nested reply, collapsible, real-time and handy",
       },
       {
         title: "Settings Screen",
-        url: "/images/projects/lifeon/setting.png",
+        url: "./images/projects/lifeon/setting.png",
         description:
           "Integrated settings includes language, password, saved design, and so on",
       },
@@ -230,18 +230,18 @@ export const projects: Project[] = [
     thumbnails: [
       {
         title: "Listing NFTs",
-        url: "/images/projects/chordchain/list.png",
+        url: "./images/projects/chordchain/list.png",
         description: "List NFTs with search and filter",
       },
       {
         title: "Detail NFT",
-        url: "/images/projects/chordchain/detail.png",
+        url: "./images/projects/chordchain/detail.png",
         description:
           "Detail of a chord NFT with preview chord for guitarist, pianist, ...",
       },
       {
         title: "Create NFT",
-        url: "/images/projects/chordchain/create.png",
+        url: "./images/projects/chordchain/create.png",
         description:
           "Create chord NFT with basic information such as song's name, description or note for reader, lyric, origin song, genre, ...",
       },
@@ -297,53 +297,53 @@ export const projects: Project[] = [
     thumbnails: [
       {
         title: "Web - Car List Page",
-        url: "/images/projects/avc/web-car-list.png",
+        url: "./images/projects/avc/web-car-list.png",
         description:
           "Manage core entity in the platform, assign, activate, deactivate, check status and so on",
       },
       {
         title: "Web - Create Manager Page",
-        url: "/images/projects/avc/web-create-manager.png",
+        url: "./images/projects/avc/web-create-manager.png",
         description:
           "Create manager for managing cars, staffs, and tracking issues",
       },
       {
         title: "Web - Train Model by ZIP Page",
-        url: "/images/projects/avc/web-train-by-zip.png",
+        url: "./images/projects/avc/web-train-by-zip.png",
         description:
           "We built the pipeline for automatically training the detection model based on image sources",
       },
       {
         title: "Web - Label Image Page (1)",
-        url: "/images/projects/avc/web-label-image-1.png",
+        url: "./images/projects/avc/web-label-image-1.png",
         description:
-          "Utilize <a href='https://igorlino.github.io/angular-annotorious/' target='_blank' rel='noreferrer' class='link'>Angular Annotorious</a> to label images for retraining the model",
+          "Utilize <a href='https://igorlino.github.io/angular-annotorious/' target='_blank' rel='noreferrer' class='hover:text-neon-500'>Angular Annotorious</a> to label images for retraining the model",
       },
       {
         title: "Web - Label Image Page (2)",
-        url: "/images/projects/avc/web-label-image-2.png",
+        url: "./images/projects/avc/web-label-image-2.png",
         description:
-          "Utilize <a href='https://igorlino.github.io/angular-annotorious/' target='_blank' rel='noreferrer' class='link'>Angular Annotorious</a> to label images for retraining the model",
+          "Utilize <a href='https://igorlino.github.io/angular-annotorious/' target='_blank' rel='noreferrer' class='hover:text-neon-500'>Angular Annotorious</a> to label images for retraining the model",
       },
       {
         title: "Web - Dashboard Page",
-        url: "/images/projects/avc/web-dashboard.png",
+        url: "./images/projects/avc/web-dashboard.png",
         description: "System generic information gathering and visualization",
       },
       {
         title: "Mobile - Car List Screen",
-        url: "/images/projects/avc/car-list.png",
+        url: "./images/projects/avc/car-list.png",
         description: "WebSocket integrated",
       },
       {
         title: "Mobile - Car Detail Screen",
-        url: "/images/projects/avc/car-detail.png",
+        url: "./images/projects/avc/car-detail.png",
         description:
           "WebSocket integrated to start, stop or receive command realtime",
       },
       {
         title: "Mobile - Issue Detail Screen",
-        url: "/images/projects/avc/issue-detail.png",
+        url: "./images/projects/avc/issue-detail.png",
         description:
           "When the car has an issue, that issue & according notification will be fetched right the time",
       },

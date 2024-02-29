@@ -101,7 +101,7 @@ export default function ArtworkSection() {
                   style={{ width: "calc(100% - 1rem)" }}
                   onClick={(event) => openModal(url, event)}
                 >
-                  <img src={`/images/artworks/${url}`} alt="Artwork" />
+                  <img src={`./images/artworks/${url}`} alt="Artwork" />
                 </div>
               ))}
             </Masonry>
@@ -137,7 +137,7 @@ export default function ArtworkSection() {
             onClick={() => closeModal()}
           >
             <img
-              src={`/images/artworks/${selectedImage.url}`}
+              src={`./images/artworks/${selectedImage.url}`}
               alt="selected artwork"
               className="w-full h-full object-contain"
             />
