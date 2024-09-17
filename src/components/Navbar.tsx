@@ -1,11 +1,11 @@
 import { BsGithub } from "react-icons/bs";
-import { FaLinkedinIn, FaTelegramPlane, FaBars, FaMixer } from "react-icons/fa";
+import { FaBars, FaLinkedinIn, FaMixer, FaTelegramPlane } from "react-icons/fa";
 
-import { SectionId } from "../constants/data";
-import Button from "./atoms/Button";
 import { useState } from "react";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
+import { SectionId } from "../constants/data";
+import Button from "./atoms/Button";
 
 const childClassName = "transition-colors hover:text-gray-200";
 
@@ -17,7 +17,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <nav className="flex justify-between py-4 px-4 md:px-12">
+      <nav className="flex justify-between items-center py-4 px-4 md:px-12">
         <a href="/" className="text-neon-500 font-bold">
           @thanhhoa214
         </a>

@@ -265,8 +265,7 @@ export const projects: Project[] = [
     ],
   },
   // {
-  //   company: companies[1],
-  //   type: "Featured Project",
+  //   type: "Data Project",
   //   name: "All-in-one Online Library Platform",
   //   description: `Online library platform helps students, librarians, and publishers can reach each other easier, synchronously either online, offline or multiple devices. Fully responsive from the smallest phone, tablet to the latest high-resolution like Mac.`,
   //   thumbnails: [],

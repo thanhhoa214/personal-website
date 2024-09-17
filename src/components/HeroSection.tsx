@@ -44,25 +44,19 @@ export default function HeroSection() {
       </a>
 
       <div
-        className="hidden z-0 absolute top-16 right-96 -rotate-6 w-20 h-20 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse lg:flex lg:justify-center lg:items-center lg:p-2"
+        className="hidden z-0 absolute top-16 right-96 -rotate-6 w-20 h-20 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg transition-transform lg:flex lg:justify-center lg:items-center lg:p-2 saturate-[.25] hover:rotate-12 hover:saturate-100"
         title="React"
       >
         <img src="images/technologies/react.svg" alt="React" />
       </div>
       <div
-        className="hidden z-0 lg:block absolute top-20 right-28 rotate-3 w-40 h-40 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse p-2"
-        title="NgRx"
-      >
-        <img src="images/technologies/ngrx.svg" alt="NgRx" />
-      </div>
-      <div
-        className="hidden z-0 lg:block absolute top-80 right-12 -rotate-12 w-60 h-60 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg hover:animate-pulse"
+        className="hidden z-0 lg:block absolute top-20 right-28 rotate-3 w-40 h-40 border border-solid border-neon-700 bg-neon-500 bg-opacity-10 rounded-lg p-2 saturate-[.25] transition-transform hover:saturate-100 hover:rotate-12"
         title="Angular"
       >
         <img src="images/technologies/angular.svg" alt="Angular" />
       </div>
       <div
-        className="hidden z-0 lg:block absolute top-72 right-96 rotate-12 w-28 h-28 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg overflow-hidden hover:animate-pulse p-3"
+        className="hidden z-0 lg:block absolute top-72 right-60 rotate-12 w-28 h-28 border border-solid border-neon-700 border-opacity-60 bg-neon-500 bg-opacity-10 rounded-lg overflow-hidden saturate-[.25] transition-transform hover:saturate-100 hover:-rotate-6 p-3"
         title="TailwindCSS"
       >
         <img src="images/technologies/tailwind.svg" alt="TailwindCSS" />

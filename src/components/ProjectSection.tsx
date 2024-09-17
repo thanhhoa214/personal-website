@@ -1,7 +1,8 @@
+import { motion } from "framer-motion";
 import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
 import { projects, SectionId } from "../constants/data";
 import { Project } from "../types/entities";
-import { motion } from "framer-motion";
+import Button from "./atoms/Button";
 
 export default function ProjectSection() {
   return (
@@ -35,14 +36,12 @@ export default function ProjectSection() {
               project={project}
               isLeft={index % 2 === 1}
               key={project.name}
-            ></ProjectItem>
+            />
           ))}
         </ol>
       </main>
       <p className="text-center">
-        <strong className="text-gray-300">
-          It's not all. The website is in progress...
-        </strong>
+        <Button>Show me more... </Button>
       </p>
     </section>
   );

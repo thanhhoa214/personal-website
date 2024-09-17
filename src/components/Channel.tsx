@@ -5,7 +5,7 @@ export default function Channel() {
   const childClassName = "transition-colors hover:text-gray-200";
   return (
     <div className="hidden md:block">
-      <div className="fixed bottom-0 left-6 flex flex-col items-center gap-4 text-gray-600">
+      <div className="fixed bottom-0 left-6 z-10 flex flex-col items-center gap-4 text-gray-600">
         <a
           href="https://www.linkedin.com/in/thanhhoa214/"
           title="🍀 View Linkedin profile (thanhhoa214)"
