@@ -11,6 +11,21 @@ export const enum SectionId {
 export const companies: Company[] = [
   {
     id: 1,
+    name: "DWF Labs",
+    url: "https://www.dwf-labs.com/",
+    thumbnailUrl: "./images/companies/dwf-labs.png",
+    teamThumbnailUrl: "./images/companies/dwf-labs-team.jpg",
+    title: "Web3 Front-end Engineer",
+    from: "Oct 2024",
+    to: "Present",
+    responsibilities: [
+      "Migrated a million-users perpeptual DEX exchange supports 4 networks from ethers.js/web3modal to Rainbowkit/wagmi/viem in 2 weeks",
+      "Implemented & documented Perpeptual DEX claim and withdraw via Stargate SDK",
+      "Created & maintained `ngx-wagmi` to interact with Wagmi SDK, `ngx-seedkit` to quickly adopt connect-wallet to Angular 18+",
+    ],
+  },
+  {
+    id: 2,
     name: "EATLAB",
     url: "https://eatlab.ai/",
     thumbnailUrl: "./images/companies/eatlab.ico",
@@ -24,7 +39,7 @@ export const companies: Company[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Coinhako",
     url: "https://www.coinhako.com/",
     thumbnailUrl: "./images/companies/coinhako.ico",
@@ -49,7 +64,7 @@ export const companies: Company[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "PI.EXCHANGE",
     url: "http://pi.exchange",
     thumbnailUrl: "./images/companies/pi.webp",
@@ -66,7 +81,7 @@ export const companies: Company[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "NNG Ltd.",
     url: "http://nng.bz",
     thumbnailUrl: "./images/companies/nng.png",
@@ -104,7 +119,109 @@ export const companies: Company[] = [
 ];
 export const projects: Project[] = [
   {
-    company: companies[1],
+    type: "Featured Project",
+    name: "ebi.xyz",
+    description: (
+      <p>
+        A decentralized exchange (DEX) platform that supports perpetual trading
+        <a
+          href="https://ebi.xyz"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-block animated-border-bottom text-neon-500 ml-1"
+        >
+          Link
+        </a>
+      </p>
+    ),
+    thumbnails: [
+      {
+        title: "Withdraw",
+        url: "./images/projects/ebi/withdraw.png",
+        description:
+          "Withdraw page allows users to withdraw their on-chain balance to their wallet.",
+      },
+      {
+        title: "Claims Portal",
+        url: "./images/projects/ebi/preview.png",
+        description:
+          "Claim portal for users withdraw their pending balance from the DEX.",
+      },
+      {
+        title: "Claims Portal Video",
+        url: "./images/projects/ebi/claim.mp4",
+        description:
+          "Claim portal for users withdraw their pending balance from the DEX.",
+      },
+    ],
+    technologies: [
+      {
+        title: "Angular 18",
+        url: "http://angular.dev/",
+        description: "High-scalable javascript framework",
+      },
+      {
+        title: "Wagmi",
+        url: "http://wagmi.sh/",
+        description: "Web3 SDK",
+      },
+      {
+        title: "Rainbowkit",
+        url: "https://www.rainbowkit.com/",
+        description: "Web3 SDK",
+      },
+    ],
+  },
+  {
+    type: "Featured Project",
+    name: "ngx-wagmi & ngx-seedkit",
+    description: (
+      <p>
+        Angular 18+ libraries to interact with Wagmi SDK and quickly adopt
+        connect-wallet into Angular projects.
+        <a
+          href="https://ngx-wagmi.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-block animated-border-bottom text-neon-500 ml-1"
+        >
+          Demo link
+        </a>
+      </p>
+    ),
+    thumbnails: [
+      {
+        title: "Demo Preview",
+        url: "./images/projects/ngx-wagmi/preview.png",
+        description:
+          "Demo page for ngx-wagmi with connect-wallet and extensive actions supported from Wagmi",
+      },
+      {
+        title: "Connect Wallet",
+        url: "./images/projects/ngx-wagmi/connect-wallet.mp4",
+        description:
+          "Connect wallet with Wagmi SDK, get user's address, balance, support ENS, multiple networks, dynamic wallet connectors from Rainbowkit, QR code scanning & deeplinking from WalletConnect",
+      },
+    ],
+    technologies: [
+      {
+        title: "Angular 18",
+        url: "http://angular.dev/",
+        description: "High-scalable javascript framework",
+      },
+      {
+        title: "Wagmi",
+        url: "http://wagmi.sh/",
+        description: "Web3 SDK",
+      },
+      {
+        title: "Rainbowkit",
+        url: "https://www.rainbowkit.com/",
+        description: "Web3 SDK",
+      },
+    ],
+  },
+  {
     type: "Featured Project",
     name: "Hybrid Interior Design App",
     description: `Interior Design Project for both Vietnam and Korean
@@ -206,9 +323,7 @@ export const projects: Project[] = [
       },
     ],
   },
-
   {
-    company: companies[1],
     type: "Featured Project",
     name: "Chordchain | NFTs on Ethereum",
     description: (

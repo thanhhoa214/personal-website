@@ -123,7 +123,7 @@ function ProjectItem({ project, isLeft }: ProjectItemProps) {
           <h3 className="text-2xl text-neon-600 font-bold mb-6">
             {project.name}
           </h3>
-          <p className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify ">
+          <p className="p-4 rounded-md bg-navy-800 bg-opacity-70 shadow-xl mb-6 text-justify">
             {project.description}
           </p>
           <ol
