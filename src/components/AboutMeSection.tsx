@@ -58,13 +58,8 @@ export default function AboutMeSection() {
           <section className="mb-4">
             Throughout my career, I have been fortunate to work in dynamic
             environments, including AI-based product companies and crypto firms.
-            These start-ups, filled with exceptional colleagues, shared a common
-            vision of breaking down barriers and making AI and revolutionary
-            financial services accessible to all. Currently, my main focus
-            revolves around developing user-friendly features, providing crypto
-            financial services, offering valuable UI/UX feedback, and
-            maintaining an extensive design system consisting of over 40
-            widely-used components across various projects.
+            Currently, my main focus revolves around developing crypto services,
+            offering valuable UI/UX feedback.
             <p>Here are a few technologies I've been working with recently:</p>
             <ul className="mt-8 flex flex-wrap text-left">
               <li className="w-1/2">NextJS</li>
@@ -73,6 +68,18 @@ export default function AboutMeSection() {
               <li className="w-1/2">Angular (Signal, RxJS, RxState)</li>
               <li className="w-1/2">TailwindCSS</li>
               <li className="w-1/2">JavaScript (ES6+)</li>
+            </ul>
+            <ul className="flex flex-col sm:flex-row items-center gap-4 mt-8 min-h-80">
+              <img
+                src="/images/certificates/alchemy.png"
+                alt="Alchemy EVM Chain Certification"
+                className="rounded-3xl p-2 object-contain w-fit max-h-80"
+              />
+              <img
+                src="/images/certificates/uiux.png"
+                alt="UI/UX Certification"
+                className="rounded-3xl p-2 object-contain w-fit max-h-80"
+              />
             </ul>
           </section>
         </motion.div>
