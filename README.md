@@ -38,11 +38,15 @@ Welcome to my portfolio repository! This project is designed to showcase my skil
 - [React Image Gallery](https://www.react-spring.io/)
 - [React Responsive Masonry](https://github.com/CassetteRocks/react-responsive-masonry)
 
+## Some demonstrations
+- Meme Image Builder - https://drive.google.com/file/d/1YP7HliI5QxauOEiDSCtLiI5U25ONdXS5/view?usp=sharing
+- NFT Minting Page - https://github.com/thanhhoa214/nft-minting
+
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js and npm installed on your machine.
+- Node.js and npm are installed on your machine.
 
 ### Installation
 
@@ -74,4 +78,4 @@ Welcome to my portfolio repository! This project is designed to showcase my skil
 
 ## License
 
-Please give me a credit if using. Happy to see your work!
+Please give me credit if you use it. Happy to see your work!
